@@ -27,7 +27,7 @@
 
   .top-section {
     /*display: block;*/
-    height: 9vh;
+    height: 7vh;
     -webkit-box-flex: 0;
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
@@ -68,8 +68,13 @@
     padding-left: 25px;
     padding-right: 25px;
     /*margin-bottom: 15px;*/
+    margin-top:0px;
     height: 80vh;
     z-index: 0;
+  }
+
+  #title-index {
+    margin-top: 5px;
   }
 
   #main-section #container-list-tasks {
