@@ -15,6 +15,7 @@
   }
 
 
+
   .top-section {
     /*display: block;*/
     height: 7vh;
@@ -51,15 +52,9 @@
 
 /*aici lucrez ..................................................*/
   #main-section {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
     padding-left: 25px;
     padding-right: 25px;
-    /*margin-bottom: 15px;*/
-    margin-top:0px;
-    height: 80vh;
+    padding-top: 0px;
     z-index: 0;
   }
 
@@ -69,7 +64,7 @@
 
   #main-section #container-list-tasks {
     display: block;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
     height: 80%;
 
     width: 100%;
@@ -158,15 +153,15 @@
 
 
 
-  .menu-bottom-section {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
+  #nav-bar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     background-color: #37c375;
 
     z-index: 1;
   }
+
   .menu-bottom {
     display: -webkit-box;
     display: -webkit-flex;

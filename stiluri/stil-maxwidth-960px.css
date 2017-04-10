@@ -1,38 +1,11 @@
 
-  .div-block {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: auto;
-    height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+body {
+  overflow: hidden;
+}
 
 
-  .top-section {
-    /*display: block;*/
-    height: 7vh;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-
-
-
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    /*height: 11vh;*/
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  .top-section {  
+    display: none;
   }
 
   #settings-btn{
@@ -49,18 +22,77 @@
 
 
 /*aici lucrez ..................................................*/
+
+
+
+  #container-all{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top:0px;
+    height: 100%;
+  }
+
+
   #main-section {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
     padding-left: 25px;
     padding-right: 25px;
-    /*margin-bottom: 15px;*/
-    margin-top:0px;
-    height: 80vh;
+    padding-top: 55px;
     z-index: 0;
+    width: 70%;
+    overflow-y: scroll;
+    flex:2;
+
   }
+
+
+
+  .menu-left {
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*width: 50vw;*/
+    /*height: 100vh;*/
+
+    padding-left: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #fcf8f8;   
+
+overflow-y: scroll;
+/*overflow: scroll;*/
+
+    /*flex: 1 2 auto;*/
+    /*height: auto;*/
+    /*height: 100%;*/
+    flex:1;
+padding-top: 55px;
+    /*flex-grow:1;*/
+    /*float:right;*/
+    width: 30%;
+
+  }
+
+
+
+
 
   #title-index {
     margin-top: 5px;
@@ -68,11 +100,12 @@
 
   #main-section #container-list-tasks {
     display: block;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
     height: 80%;
 
     width: 100%;
     margin-bottom: 10px;
+
   }
 
 
@@ -157,7 +190,7 @@
 
 
 
-  .menu-bottom-section {
+  /*.menu-bottom-section-mobile {
     -webkit-box-flex: 0;
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
@@ -165,15 +198,26 @@
     background-color: #37c375;
 
     z-index: 1;
+  }*/
+
+
+  #nav-bar {
+    position:fixed;
+    top: 0px;
+
+    width: 100%;
+    background-color: blue;
+    z-index: 1;
+    /*height: px;*/
   }
+
+
   .menu-bottom {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 11vh;
-    min-height: 50px;
-    max-height: 70px;
+    height: 50px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -188,6 +232,7 @@
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
     flex: 0 auto;
+    display: none;
   }
 
 
@@ -214,50 +259,6 @@
 
 
 
-  .menu-left {
-    position: absolute;
-    margin: 0px;
-    left: -100%;
-    top: 0px;
-    bottom: 0px;
-    z-index: 9999;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 80vw;
-    padding-left: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #fcf8f8;
-    box-shadow: 0 -1px 16px 0 #ac9999;    
-  }
-
-
-.close-left-menu {
-  transition-timing-function: ease;
-  transition: 0.5s;
-  /*-webkit-transform: translate(-10%) ;*/
-  /*-moz-transform: translate(-100%) ;*/
-  /*-o-transform: translate(-100%);*/
-  /*transform: translate(0px) ;*/
-}
-
-.open-left-menu {
-  transition-timing-function: ease;
-  transition: 0.5s;
-  -webkit-transform: translate(100vw) ;
-  -moz-transform: translate(100vw) ;
-  -o-transform: translate(100vw);
-  transform: translate(100vw) ;
-}
 
 
 
@@ -379,22 +380,8 @@
     margin-top: 10px;
   }
   .close-menu-left {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 32px;
-    margin-left: 5px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    font-family: Inconsolata, monospace;
-    color: #908484;
-    font-size: 17px;
-    font-weight: 700;
-    text-decoration: none;
+    
+    display: none;
   }
   .text-close-menu-left {
     margin-left: 15px;
@@ -404,7 +391,6 @@
   }
   .container-projects-list-menu-left {
     display: block;
-    overflow: scroll;
     margin-top: 19px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
