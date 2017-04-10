@@ -1,6 +1,6 @@
 
 var btnClose = document.getElementById("close-left-menu-btn");
-var menuLeft = document.getElementById("one");
+var menuLeft = document.getElementById("menu-left");
 var menuAddTask = document.getElementById("container-info-add-task");
 var btnOpen = document.getElementById("open-left-menu-btn");
 var btnOpenTask = document.getElementById("add-task-button");
