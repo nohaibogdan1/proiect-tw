@@ -93,8 +93,8 @@
     border-width: 2px 0px 2px 0px;
     background-color: rgba(200, 236, 200, 0.5);
     width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
     background-color: #E0E0DD;
   }
 
@@ -110,20 +110,20 @@
   }
 
   .title-task {
-    font-size: 18px;
+    font-size: 14px;
     word-wrap: break-word;
     width: 100%;
     margin-bottom: 5px;
   }
 
   .container-date-time {
-    font-size: 14px;
+    font-size: 12px;
     margin-left:10px;
   }
 
   .project-name {
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 5px;
     width: 100%;
     word-wrap: break-word;
@@ -227,6 +227,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 80vw;
+    max-width: 350px;
     padding-left: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -354,6 +355,11 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
+
+  .icon-close-menu-left {
+    padding-top:2px;
+  }
+
   .container-text-tasks {
     margin-top: 0px;
     padding-left: 14px;
@@ -395,7 +401,7 @@
     flex-direction: row;
     font-family: Inconsolata, monospace;
     color: #908484;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 700;
     text-decoration: none;
   }
@@ -408,7 +414,7 @@
   .container-projects-list-menu-left {
     display: block;
     overflow: scroll;
-    margin-top: 5px;
+    margin-top: 8px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -559,6 +565,7 @@
   }
   .text-block-5 {
     display: inline-block;
+    font-size: 14px;
   }
 
 
