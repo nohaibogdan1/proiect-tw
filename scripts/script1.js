@@ -6,6 +6,8 @@ var btnOpen = document.getElementById("open-left-menu-btn");
 var btnOpenTask = document.getElementById("add-task-button");
 var btnCloseAddTask = document.getElementById("close-add-task");
 var taskTextInput = document.getElementById("task-text-input");
+var menuBottomSection = document.getElementById("menu-bottom-section");
+var body = document.body;
 // alert(btnClose);
 
 // alert(menuLeft);
@@ -49,3 +51,14 @@ btnOpen.addEventListener("click", openMenuLeft);
 btnClose.addEventListener("click", closeMenuLeft);
 btnOpenTask.addEventListener("click", openAddTask);
 btnCloseAddTask.addEventListener("click", closeAddTask);
+
+
+var windowWidth = window.innerWidth;
+
+// if (windowWidth > 750){
+// 	body.appendChild(menuBottomSection);
+// 	if (menuBottomSection.classList.contains("menu-bottom-section-mobile")){
+// 		menuBottomSection.classList.remove("menu-bottom-section-mobile");
+// 	}
+// 	menuBottomSection.classList.add("menu-bottom-section-desktop");
+// }
