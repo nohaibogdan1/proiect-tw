@@ -14,22 +14,7 @@
 }
 
 
-.top-section {
-  /*display: block;*/
-  height: 7vh;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 auto;
-  -ms-flex: 0 auto;
-  flex: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
+
 
 #settings-btn{
   margin-top: 20px;
@@ -44,7 +29,7 @@
 
 
 
-/*aici lucrez ..................................................*/
+
 #container-main {
   padding-left: 25px;
   padding-right: 25px;
@@ -506,12 +491,7 @@
   border-radius: 40px;
   background-color: #4fa8e4;
 }
-.menu-left-item-project-color.color-two {
-  background-color: #e44fa8;
-}
-.menu-left-item-project-color.color-three {
-  background-color: #6de44f;
-}
+
 .div-block-2 {
   width: 40px;
   min-height: 20px;

@@ -1,29 +1,4 @@
 
-body {
-  overflow: hidden;
-}
-
-
-  .top-section {  
-    display: none;
-  }
-
-  #settings-btn{
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-right: 25px;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-  }
-
-
-
-
-/*aici lucrez ..................................................*/
-
-
 
   #container-all{
     display: -webkit-box;
@@ -37,21 +12,20 @@ body {
     height: 100%;
   }
 
-
-  #main-section {
+  #container-main {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 55px;
     z-index: 0;
-    width: 70%;
+    /*width: 70%;*/
     overflow-y: scroll;
     flex:2;
-
+    /*color:blue;
+    background-color: blue;*/
   }
 
 
-
-  .menu-left {
+  #menu-left {
     margin: 0px;
     left: 0px;
     top: 0px;
@@ -86,24 +60,31 @@ overflow-y: scroll;
 padding-top: 55px;
     /*flex-grow:1;*/
     /*float:right;*/
-    width: 30%;
+    /*width: 30%;*/
+    width: 600px;
 
   }
 
-
-
-
-
-  #title-index {
-    margin-top: 5px;
+#settings-btn{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
   }
 
-  #main-section #container-list-tasks {
+  #title-list-tasks {
+  margin-top: 5px;
+}
+
+  #container-main #container-list-tasks {
     display: block;
     /*overflow-x: scroll;*/
     height: 80%;
-
-    width: 100%;
+    /*width: 100%;*/
+    width: 95%;
     margin-bottom: 10px;
 
   }
@@ -188,19 +169,6 @@ padding-top: 55px;
 /*------------------------------------------------------------------*/
 
 
-
-
-  /*.menu-bottom-section-mobile {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-    background-color: #37c375;
-
-    z-index: 1;
-  }*/
-
-
   #nav-bar {
     position:fixed;
     top: 0px;
@@ -262,7 +230,7 @@ padding-top: 55px;
 
 
 
-  .container-tasks-today {
+  #container-tasks-today {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -286,7 +254,7 @@ padding-top: 55px;
     -ms-flex: 0 auto;
     flex: 0 auto;
   }
-  .container-projects {
+  #container-projects {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -303,7 +271,7 @@ padding-top: 55px;
     flex: 1;
     background-color: hsla(0, 0%, 100%, 0);
   }
-  .container-menu-left-options {
+  #container-menu-left-options {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -316,7 +284,7 @@ padding-top: 55px;
     color: #2e2e2e;
     margin-top: 15px;
   }
-  .task-today {
+  .task-brief {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -338,7 +306,7 @@ padding-top: 55px;
     display: -ms-flexbox;
     display: flex;
   }
-  .container-icon-today {
+  .container-icon-task-brief {
     display: block;
     margin-top: 0px;
     -webkit-box-orient: vertical;
@@ -358,7 +326,7 @@ padding-top: 55px;
   .container-number-tasks {
     padding-left: 10px;
   }
-  .icon-image-task-menu-left {
+  .icon-image-task-brief {
     position: static;
     left: 0px;
     right: 0px;
@@ -368,14 +336,12 @@ padding-top: 55px;
   }
   .text-block {
     display: block;
-    margin-top: 0px;
+    margin-top: 10px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 14px;
     line-height: 20px;
   }
-  .text-block {
-    margin-top: 10px;
-  }
+  
   .image-2 {
     margin-top: 10px;
   }
@@ -384,12 +350,12 @@ padding-top: 55px;
     display: none;
   }
   .text-close-menu-left {
-    margin-left: 15px;
+    display: none;
   }
   .text-block-2 {
     line-height: 23px;
   }
-  .container-projects-list-menu-left {
+  #container-projects-list {
     display: block;
     margin-top: 19px;
     -webkit-box-orient: vertical;
@@ -409,7 +375,7 @@ padding-top: 55px;
   .container-text-projects-menu-left {
     padding-left: 29px;
   }
-  .container-option-projects-menu-left {
+  #container-option-menu-left {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -443,7 +409,7 @@ padding-top: 55px;
     font-size: 12px;
     text-decoration: none;
   }
-  .container-menu-left-project-item {
+  .container-project-item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -470,14 +436,14 @@ padding-top: 55px;
     -ms-flex: 1;
     flex: 1;
   }
-  .container-menu-left-project-item-option {
+  .container-project-item-option {
     margin-bottom: 0px;
   }
-  .container-menu-left-item-project-color {
+  .container-item-project-color {
     display: inline-block;
     margin-top: 0px;
   }
-  .container-menu-left-item-project-text {
+  .container-item-project-text {
     display: block;
     overflow: visible;
     width: auto;
@@ -486,10 +452,10 @@ padding-top: 55px;
     direction: ltr;
     text-align: left;
   }
-  .container-menu-left-item-project-number-tasks {
+  .container-item-project-number-tasks {
     display: inline;
   }
-  .menu-left-item-project-color {
+  .item-project-color {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -497,12 +463,8 @@ padding-top: 55px;
     border-radius: 40px;
     background-color: #4fa8e4;
   }
-  .menu-left-item-project-color.color-two {
-    background-color: #e44fa8;
-  }
-  .menu-left-item-project-color.color-three {
-    background-color: #6de44f;
-  }
+  
+ 
   .div-block-2 {
     width: 40px;
     min-height: 20px;
@@ -522,26 +484,12 @@ padding-top: 55px;
     clear: none;
     font-size: 14px;
   }
-  .left-menu-project-number-tasks {
+  .project-number-tasks {
     display: inline-block;
     margin-left: 10px;
     font-size: 14px;
   }
-  .link-block-2 {
-    display: block;
-    overflow: visible;
-    margin-top: 0px;
-    margin-left: 0px;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    color: #3a8342;
-  }
-  .text-block-5 {
-    display: inline-block;
-  }
-
+  
 
 
 
@@ -591,3 +539,16 @@ margin-left: 20px;
 
 
 
+#add-project-btn {
+  display: block;
+  overflow: visible;
+  margin-top: 0px;
+  margin-left: 0px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #3a8342;
+  display: inline-block;
+  font-size: 14px;
+}
