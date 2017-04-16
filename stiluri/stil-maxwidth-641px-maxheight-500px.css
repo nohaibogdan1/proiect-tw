@@ -16,23 +16,6 @@
 
 
 
-.top-section {
-  /*display: block;*/
-  height: 7vh;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 auto;
-  -ms-flex: 0 auto;
-  flex: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 
 #settings-btn{
   margin-top: 20px;
@@ -46,17 +29,66 @@
 
 
 
-
-/*aici lucrez ..................................................*/
 #container-main {
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 0px;
   z-index: 0;
+  padding-bottom: 55px;
+  overflow-y: scroll;
+    
 }
 
 #title-list-tasks {
   margin-top: 5px;
+}
+
+
+
+#menu-left {
+  position: absolute;
+  margin: 0px;
+  left: -100%;
+  top: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80vw;
+  max-width: 350px;
+  padding-left: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fcf8f8;
+  box-shadow: 0 -1px 16px 0 #ac9999;  
+
+
+
+
+
+  overflow-y: scroll;
+  
+}
+
+
+
+
+
+.close-left-menu {
+  transition-timing-function: ease;
+  transition: 0.5s;
+  /*-webkit-transform: translate(-10%) ;*/
+  /*-moz-transform: translate(-100%) ;*/
+  /*-o-transform: translate(-100%);*/
+  /*transform: translate(0px) ;*/
 }
 
 #container-main #container-list-tasks {
@@ -204,43 +236,6 @@
 }
 
 
-
-#menu-left {
-  position: absolute;
-  margin: 0px;
-  left: -100%;
-  top: 0px;
-  bottom: 0px;
-  z-index: 9999;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80vw;
-  max-width: 350px;
-  padding-left: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #fcf8f8;
-  box-shadow: 0 -1px 16px 0 #ac9999;    
-}
-
-
-.close-left-menu {
-  transition-timing-function: ease;
-  transition: 0.5s;
-  /*-webkit-transform: translate(-10%) ;*/
-  /*-moz-transform: translate(-100%) ;*/
-  /*-o-transform: translate(-100%);*/
-  /*transform: translate(0px) ;*/
-}
 
 .open-left-menu {
   transition-timing-function: ease;
@@ -562,18 +557,36 @@
 
 
 
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------*/
+
+
+
 #container-info-add-task {
   position: absolute;
-  width: 85vw;
+  width: 78vw;
   left: 7vw;
-  top:25vh;
-  border-radius: 20px;
+  top:0vh;
   padding-top: 15px;
   min-width: 100px;
   min-height: 80px;
-  max-height: 140px;
   max-width: 500px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /*margin-bottom: 55px;*/
+  /*padding-bottom: 25px;*/
+  height: 78vh;
+  max-height: 600px;
+  overflow-y: scroll;
 }
+
+
 .close-container-add-task {
   display: none;
   background-color:rgba(215, 236, 250, 0);
@@ -594,15 +607,72 @@
   /*}*/
 
   #task-text-input {
-    width: 85%;
-    margin-left: 20px;
+    width: 100%;
+    /*margin-left: 20px;*/
     height: 25px;
+    /*padding-left: 20px;*/
   }
 
-  #add-task-form input {
+/*  #add-task-form input {
     /*width: 100%;*/
+    /*margin-bottom: 10px;*/
+    /*margin-left: 20px;*/
+    
+  /*}*/
+
+  .elem-form {
     margin-bottom: 10px;
-    margin-left: 20px;
+  }
+
+#nr-days {
+  width: 25px;
+}
+
+  .time-date {
+    height: 15px;
   }
 
 
+
+#map {
+  display:none;
+  width: 78vw;
+  height: 70vh;
+  top: 0;
+  left:0;
+  max-width: 460px;
+  max-height: 500px;
+}
+
+#locatie {
+  display: flex;
+
+}
+
+#map-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+
+
+
+#specific-days-week {
+  display: none;
+}
+
+
+#specific-days-month {
+  display: none;
+}
+
+option {
+  margin-bottom: 5px;
+  width: 200px;
+}
+
+
+.specific-days{
+  height: 150px;
+}

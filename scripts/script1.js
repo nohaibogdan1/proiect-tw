@@ -8,6 +8,13 @@ var btnCloseAddTask = document.getElementById("close-add-task");
 var taskTextInput = document.getElementById("task-text-input");
 var menuBottomSection = document.getElementById("menu-bottom-section");
 var body = document.body;
+
+var controlsBtn1 = document.getElementById("controls-btn-1");
+
+var mapBtn = document.getElementById("map-btn");
+var map = document.getElementById("map");
+
+
 // alert(btnClose);
 
 // alert(menuLeft);
@@ -51,14 +58,53 @@ btnOpen.addEventListener("click", openMenuLeft);
 btnClose.addEventListener("click", closeMenuLeft);
 btnOpenTask.addEventListener("click", openAddTask);
 btnCloseAddTask.addEventListener("click", closeAddTask);
+controlsBtn1.addEventListener("click", openAddTask);
 
 
 var windowWidth = window.innerWidth;
 
-// if (windowWidth > 750){
-// 	body.appendChild(menuBottomSection);
-// 	if (menuBottomSection.classList.contains("menu-bottom-section-mobile")){
-// 		menuBottomSection.classList.remove("menu-bottom-section-mobile");
-// 	}
-// 	menuBottomSection.classList.add("menu-bottom-section-desktop");
-// }
+function openMap() {
+	map.style.display = "block";
+}
+
+mapBtn.addEventListener("click", openMap);
+
+
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+var nrDays = document.getElementById("days-weeks-etc");
+
+function showSelectDays() {
+	var selectedOptionValue = nrDays.options[nrDays.selectedIndex].value;
+
+	if (selectedOptionValue == 2) {
+		var selectDaysMonth = document.getElementById("specific-days-month");
+		selectDaysMonth.style.display = "none";
+		var selectDaysWeek = document.getElementById("specific-days-week");
+		selectDaysWeek.style.display = "block";
+
+	}
+	else if (selectedOptionValue == 3) {
+		var selectDaysWeek = document.getElementById("specific-days-week");
+		selectDaysWeek.style.display = "none";
+		var selectDaysMonth = document.getElementById("specific-days-month");
+		selectDaysMonth.style.display = "block";
+	}
+	else {
+		var selectDaysWeek = document.getElementById("specific-days-week");
+		selectDaysWeek.style.display = "none";
+		var selectDaysMonth = document.getElementById("specific-days-month");
+		selectDaysMonth.style.display = "none";
+	}
+
+
+}
+nrDays.addEventListener("change", showSelectDays);
+
