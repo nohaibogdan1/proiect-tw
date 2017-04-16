@@ -33,9 +33,9 @@
 #container-main {
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 0px;
   z-index: 0;
-  
+  overflow-y: scroll;
+  padding-bottom: 55px;
 }
 
 #title-list-tasks {
@@ -208,13 +208,16 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
+
   flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   background-color: #fcf8f8;
-  box-shadow: 0 -1px 16px 0 #ac9999;    
+  box-shadow: 0 -1px 16px 0 #ac9999;   
+
+  overflow-y: scroll; 
 }
 
 
@@ -517,18 +520,23 @@
   font-size: 14px;
 }
 
+
 #container-info-add-task {
   position: absolute;
-  width: 85vw;
-  
+  width: 78vw;
   left: 7vw;
-  top:25vh;
-  border-radius: 20px;
+  top:0vh;
   padding-top: 15px;
   min-width: 100px;
   min-height: 80px;
-  max-height: 140px;
   max-width: 500px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /*margin-bottom: 55px;*/
+  /*padding-bottom: 25px;*/
+  height: 78vh;
+  max-height: 600px;
+  overflow-y: scroll;
 }
 .close-container-add-task {
   display: none;
@@ -547,34 +555,54 @@
   -moz-transform: translate(100vw) ;
   -o-transform: translate(100vw);
   transform: translate(100vw) ;*/
+  /*}*/
+
+  #task-text-input {
+    width: 100%;
+    /*margin-left: 20px;*/
+    height: 25px;
+    /*padding-left: 20px;*/
+  }
+/*  #add-task-form input {
+    /*width: 100%;*/
+    /*margin-bottom: 10px;*/
+    /*margin-left: 20px;*/
+    
+  /*}*/
+
+  .elem-form {
+    margin-bottom: 10px;
+  }
+
+#nr-days {
+  width: 25px;
 }
 
-#task-text-input {
-  width: 85%;
+  .time-date {
+    height: 15px;
+  }
+
+
+
+#map {
+  display:none;
+  width: 78vw;
+  height: 70vh;
+  top: 0;
+  left:0;
+  max-width: 460px;
+  max-height: 400px;
+}
+
+#locatie {
+  display: flex;
+
+}
+
+#map-btn {
+  width: 20px;
+  height: 20px;
   margin-left: 20px;
-  height: 25px;
-}
-
-#add-task-form input {
-  /*width: 100%;*/
-  margin-bottom: 10px;
-  margin-left: 20px;
 }
 
 
-
-
-
-#add-project-btn {
-  display: block;
-  overflow: visible;
-  margin-top: 0px;
-  margin-left: 0px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  color: #3a8342;
-  display: inline-block;
-  font-size: 14px;
-}
