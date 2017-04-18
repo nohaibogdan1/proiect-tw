@@ -179,3 +179,106 @@ body {
 }
 
 
+
+@media screen  and (min-width: 451px) {
+
+#container-all {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top:0px;
+    height: 100%;
+}
+
+
+
+#container-main {
+	overflow-y: scroll;
+	min-width: 210px;
+    width: 30vw;
+  
+	flex:1;
+}
+
+
+#container-friend-tasks {
+	width: 70vw;
+	padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 55px;
+    height: auto;
+    z-index: 0;
+    position:relative;
+    flex: 2;
+    top:0px;
+    left:0px;
+}
+
+#btn-delete {
+    margin-top:0px;
+}
+
+#container-friend-tasks .options {
+    margin-top: 0px;
+}
+
+#btn-close {
+    display:none;
+}
+}
+
+
+@media screen  and (min-width: 751px) {
+	#nav-bar{
+	top:0px;
+	max-width: 960px;
+	z-index: 2;
+}
+
+
+
+#container-main, #container-friend-tasks {
+	padding-bottom: 0px;
+	margin-top: 0px;
+}
+
+#container-friend-tasks, #container-main {
+	padding-top: 55px;
+}
+
+
+#container-options-info{
+	top: 55px;
+}
+
+
+
+} 
+
+@media screen  and (min-width: 961px) {
+	#container-all, #nav-bar {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+
+#nav-container {
+	background-color: #37c375;
+	height: 10vh;
+  	min-height: 40px;
+  	max-height: 50px;
+	width: 100vw;
+}
+}
+
+
+
+
+
+
