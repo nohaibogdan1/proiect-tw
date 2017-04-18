@@ -17,9 +17,9 @@ body {
   	display: -webkit-flex;
   	display: -ms-flexbox;
   	display: flex;
-  	height: 11vh;
-  	min-height: 50px;
-  	max-height: 70px;
+  	height: 10vh;
+  	min-height: 40px;
+  	max-height: 50px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -132,6 +132,7 @@ body {
 	z-index:1;
 	overflow-y: scroll;
 	display: none;
+
 
 }
 

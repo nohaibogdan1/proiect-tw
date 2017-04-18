@@ -4,10 +4,22 @@
 	<title>friends page</title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="stiluri/friends-stil-main.css" type="text/css">
+	
+	<link rel="stylesheet"  href="stiluri/friends-stil-main.css" type="text/css">
+
+	<link rel="stylesheet" media="screen  and (min-width: 451px)"  href="stiluri/friends-stil-minwidth-451px.css" type="text/css">
+
+	<link rel="stylesheet" media="screen  and (min-width: 751px)"  href="stiluri/friends-stil-minwidth-751px.css" type="text/css">
+
+	<link rel="stylesheet" media="screen  and (min-width: 961px)"  href="stiluri/friends-stil-minwidth-961px.css" type="text/css">
+
+
+
+
 </head>
 <body>
 
+<div id="nav-container">
 	<nav id="nav-bar">
     	<a id="btn-home" href="index.html">
     		<img src="images/home-icon-2.svg" alt="home" width="20px" height="20px"/>
@@ -25,9 +37,9 @@
     		<img src="images/get-info-icon-2.svg" alt="get info" width="20px" height="20px"/>
     	</div>
   	</nav>
+</div>
 
-
-
+  	<div id="container-all">
   	<div id="container-main">
   	<!-- bara pentru cautarea prietenilor -->
   		<div id="search-bar-container">
@@ -147,7 +159,12 @@
 
   		</form>
   		
-  		<div id="container-friend-tasks">
+
+  	</div>
+
+
+  	
+  	<div id="container-friend-tasks">
   			<div class="options">
   				<div id="btn-delete">
   					Delete friend
@@ -195,6 +212,44 @@
 		  				Add task
 		  		</div>
   			</div>
+  			<div class="task-friend">
+	  			<div class="denumire-task-friend">
+	  				Merg la intrunirea javascript
+	  			</div>
+	  			<div class="locatie-task-friend">
+	  				Facultatea de informatica
+	  			</div>
+	  			<div class="wrapper-date-hour">
+		  			<div class="date-task-friend">
+		  				29-05-2017
+		  			</div>
+		  			<div class="hour-task-friend">
+		  				19:00 - 21:00
+		  			</div>
+	  			</div>
+	  			<div class="btn-add-task-friend">
+		  				Add task
+		  		</div>
+  			</div>
+  			<div class="task-friend">
+	  			<div class="denumire-task-friend">
+	  				Merg la intrunirea javascript
+	  			</div>
+	  			<div class="locatie-task-friend">
+	  				Facultatea de informatica
+	  			</div>
+	  			<div class="wrapper-date-hour">
+		  			<div class="date-task-friend">
+		  				29-05-2017
+		  			</div>
+		  			<div class="hour-task-friend">
+		  				19:00 - 21:00
+		  			</div>
+	  			</div>
+	  			<div class="btn-add-task-friend">
+		  				Add task
+		  		</div>
+  			</div>
 
   			<div class="task-friend">
 	  			<div class="denumire-task-friend">
@@ -217,7 +272,6 @@
   			</div>
   			
   		</div>
-
   	</div>
 
 
