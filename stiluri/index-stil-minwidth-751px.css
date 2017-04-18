@@ -1,0 +1,186 @@
+
+  #container-all{
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top:0px;
+    height: 100%;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+  }
+
+
+  #container-main {
+    position: relative;
+    overflow-y: scroll;
+    width: 70%;
+    flex:2;
+    padding-left: 25px;
+  padding-right: 25px;
+  z-index: 0;
+  padding-bottom: 55px;
+  }
+
+
+  #menu-left {
+    left: 0px;
+    /*top:0px;*/
+    z-index: 0;
+    height: 100vh;
+    flex:1;
+    padding-top: 55px;
+    width: 300px;
+    max-width: 300px;
+    position: relative;
+
+  }
+
+
+
+
+  #container-main #container-list-tasks {
+    width: 95%;
+  }
+
+
+
+  .container-task {
+    padding-bottom: 10px;
+  }
+
+
+  .title-task {
+    font-size: 18px;
+  }
+
+  .container-date-time {
+    font-size: 14px;
+  }
+
+  .project-name {
+    font-size: 14px;
+  }
+
+
+
+
+  #nav-bar {
+    top: 0px;
+  }
+
+
+  .menu-bottom {
+    height: 50px;
+  }
+
+  #open-left-menu-btn{
+    display: none;
+  }
+
+
+  
+  #container-projects {
+    padding-top: 25px;
+  }
+
+  #container-menu-left-options {
+    margin-top: 15px;
+  }
+
+ 
+  .container-text-tasks {
+    padding-left: 12px;
+  }
+
+  .icon-image-task-brief {
+    margin-top: 10px;
+  }
+
+  .text-block {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  
+
+  .close-menu-left {
+    
+    display: none;
+  }
+
+  .text-close-menu-left {
+    display: none;
+  }
+  .text-block-2 {
+    line-height: 23px;
+  }
+  #container-projects-list {
+    margin-top: 19px;
+  }
+
+  #container-option-menu-left {
+    margin-top: 18px;
+    margin-bottom: 28px;
+  }
+
+  .container-project-item {
+    margin-bottom: 15px;
+   }
+
+
+  
+
+  .menu-left-title-project {
+    font-size: 14px;
+  }
+
+ 
+  
+
+
+
+  #container-info-add-task {
+    position: absolute;
+    width: 85vw;
+    
+    left: 7vw;
+    top:25vh;
+    border-radius: 20px;
+    padding-top: 15px;
+    min-width: 100px;
+    min-height: 80px;
+    max-width: 500px;
+  }
+
+  .close-container-add-task {
+    display: none;
+    background-color:rgba(215, 236, 250, 0);
+    
+  }
+  .open-container-add-task {
+    display: block;
+    background-color:rgba(215, 236, 250, 0.9);
+  }
+ 
+
+  #task-text-input {
+    width: 85%;
+    margin-left: 20px;
+    height: 25px;
+  }
+
+  #add-task-form input {
+    /*width: 100%;*/
+    margin-bottom: 10px;
+margin-left: 20px;
+  }
+
+
+
+
+
+#map {
+  display:none;
+}
