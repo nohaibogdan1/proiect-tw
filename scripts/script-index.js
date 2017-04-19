@@ -1,44 +1,46 @@
-
-var btnClose = document.getElementById("close-left-menu-btn");
-var menuLeft = document.getElementById("menu-left");
-var menuAddTask = document.getElementById("container-info-add-task");
-var btnOpen = document.getElementById("open-left-menu-btn");
-var btnOpenTask = document.getElementById("add-task-button");
+var btnCloseLeftMenu = document.getElementById("btn-close-left-menu");
+var btnOpenLeftMenu = document.getElementById("btn-open-left-menu");
+var btnOpenAddTask = document.getElementById("btn-add-task");
 var btnCloseAddTask = document.getElementById("close-add-task");
 var taskTextInput = document.getElementById("task-text-input");
 var menuBottomSection = document.getElementById("menu-bottom-section");
+var menuAddTask = document.getElementById("container-info-add-task");
 var body = document.body;
 
-var controlsBtn1 = document.getElementById("controls-btn-1");
 
 var mapBtn = document.getElementById("map-btn");
 var map = document.getElementById("map");
 
 
-// alert(btnClose);
 
-// alert(menuLeft);
+function closeLeftMenu (){
+	var leftMenu = document.getElementById("left-menu");
 
-
-
-function closeMenuLeft(){
-	
-	menuLeft.classList.add("close-left-menu");
-	if(menuLeft.classList.contains("open-left-menu")) {
-		menuLeft.classList.remove("open-left-menu");
+	leftMenu.classList.add("close-left-menu");
+	if(leftMenu.classList.contains("open-left-menu")) {
+		leftMenu.classList.remove("open-left-menu");
 	}
 }
 
-function openMenuLeft() {
-	if(menuLeft.classList.contains("close-left-menu")) {
-		menuLeft.classList.remove("close-left-menu");
+
+function openLeftMenu (){
+	var leftMenu = document.getElementById("left-menu");
+
+	leftMenu.classList.add("open-left-menu");
+	if(leftMenu.classList.contains("close-left-menu")) {
+		leftMenu.classList.remove("close-left-menu");
 	}
-	menuLeft.classList.add("open-left-menu");
 }
+
+
+btnCloseLeftMenu.addEventListener("click", closeLeftMenu);
+btnOpenLeftMenu.addEventListener("click", openLeftMenu);
+
 
 
 
 function openAddTask() {
+	closeLeftMenu();
 	if(menuAddTask.classList.contains("close-container-add-task")){
 		menuAddTask.classList.remove("close-container-add-task");
 	}
@@ -54,11 +56,9 @@ function closeAddTask() {
 }
 
 
-btnOpen.addEventListener("click", openMenuLeft);
-btnClose.addEventListener("click", closeMenuLeft);
-btnOpenTask.addEventListener("click", openAddTask);
+
+btnOpenAddTask.addEventListener("click", openAddTask);
 btnCloseAddTask.addEventListener("click", closeAddTask);
-controlsBtn1.addEventListener("click", openAddTask);
 
 
 var windowWidth = window.innerWidth;
@@ -107,4 +107,3 @@ function showSelectDays() {
 
 }
 nrDays.addEventListener("change", showSelectDays);
-
