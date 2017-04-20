@@ -398,6 +398,27 @@ font-family: 'Open Sans', sans-serif;
   }
 
 
+/*clasa pentru butoanele form-ului de modificare a unui proiect*/
+.btn-form-modify {
+  font-size: 12px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent;
+}
+.btn-form-modify:hover {
+  opacity: .7;
+}
+.btn-form-modify:active {
+  opacity: .7;
+}
+.btn-form-modify:focus {
+  outline:none;
+}
+
+
+
+
+
 
 
 
