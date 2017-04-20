@@ -12,9 +12,14 @@ color: rgba(0, 0, 0, 0.87);
 }
 
 
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
 }
+
 
 h5 {
   font-size: 14px;
@@ -83,7 +88,6 @@ h5 {
 font-family: 'Open Sans', sans-serif;
   font-size: 12px;
 
-/*font-family: 'Roboto', sans-serif;*/
 }
 
 #left-menu #container-top-part{
@@ -96,15 +100,63 @@ font-family: 'Open Sans', sans-serif;
 
 
 
-#left-menu #btn-close-left-menu {
+
+/*opacitate pentru iconurile din left menu si taskuri*/
+
+.task-item img  {
+  opacity: .7;
+}
+
+#left-menu img {
+  opacity: .8;
+}
+
+
+/*opacitate pentru iconurile din nav-bar si hover */
+
+#nav-bar img {
+  opacity: .8;
+  transition: all 0.5s ease;
+}
+
+#nav-bar img:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+ #btn-close-left-menu {
   margin-top: 10px;
   bottom: 5px;
   background-color: #ff77a9;
+  padding-top: 2px;
+  /*width: 160px;*/
+  width: 60%;
+  text-align: center;
+  border:0;
 }
+
+#btn-close-left-menu:active {
+  border: 0;
+  background-color: #c9457a;
+}
+#btn-close-left-menu:focus {
+  outline: none;
+}
+
 
 .task-brief {
   display: flex;
 }
+
+
+.task-brief:hover {
+  background-color: rgba(255,255,255, 0.6);
+}
+
 
 .task-brief .text-task-brief, .task-brief .number-tasks-brief {
   margin-left: 12px;
@@ -118,6 +170,10 @@ font-family: 'Open Sans', sans-serif;
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.project-item:hover {
+  background-color: rgba(255,255,255,0.6);
 }
 
 .project-item .project-info {
@@ -143,11 +199,38 @@ font-family: 'Open Sans', sans-serif;
 
 .btn-modify-project {
   margin-left: 15px;
+  color: rgba(0,0,0,0.3);
+  font-size: 14px;
+  border:none;
+  background-color: transparent;
 }
+
+
+.btn-modify-project:hover {
+  color: rgba(0,0,0,1);
+}
+
+.btn-modify-project:focus {
+  outline: none;
+}
+
 
 #btn-add-project {
   margin-top: 10px;
-  background-color: #ec407a;
+  background-color: transparent;
+  border-color: #ff77a9;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 11px;
+  width: 60%;
+}
+
+#btn-add-project:active {
+  border-color: #c9457a;
+}
+
+#btn-add-project:focus {
+  outline: none;
 }
 
 
@@ -313,6 +396,27 @@ font-family: 'Open Sans', sans-serif;
   .specific-days{
     height: 150px;
   }
+
+
+/*clasa pentru butoanele form-ului de modificare a unui proiect*/
+.btn-form-modify {
+  font-size: 12px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent;
+}
+.btn-form-modify:hover {
+  opacity: .7;
+}
+.btn-form-modify:active {
+  opacity: .7;
+}
+.btn-form-modify:focus {
+  outline:none;
+}
+
+
+
 
 
 
