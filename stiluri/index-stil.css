@@ -12,6 +12,7 @@ color: rgba(0, 0, 0, 0.87);
 }
 
 
+
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
 }
@@ -83,7 +84,6 @@ h5 {
 font-family: 'Open Sans', sans-serif;
   font-size: 12px;
 
-/*font-family: 'Roboto', sans-serif;*/
 }
 
 #left-menu #container-top-part{
@@ -92,6 +92,34 @@ font-family: 'Open Sans', sans-serif;
   overflow-y: scroll;
 
 }
+
+
+
+
+
+/*opacitate pentru iconurile din left menu si taskuri*/
+
+.task-item img  {
+  opacity: .7;
+}
+
+#left-menu img {
+  opacity: .8;
+}
+
+
+/*opacitate pentru iconurile din nav-bar si hover */
+
+#nav-bar img {
+  opacity: .8;
+  transition: all 0.5s ease;
+}
+
+#nav-bar img:hover {
+  opacity: 1;
+}
+
+
 
 
 
@@ -106,6 +134,12 @@ font-family: 'Open Sans', sans-serif;
   display: flex;
 }
 
+
+.task-brief:hover {
+  background-color: rgba(255,255,255, 0.6);
+}
+
+
 .task-brief .text-task-brief, .task-brief .number-tasks-brief {
   margin-left: 12px;
 
@@ -118,6 +152,10 @@ font-family: 'Open Sans', sans-serif;
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.project-item:hover {
+  background-color: rgba(255,255,255,0.6);
 }
 
 .project-item .project-info {
@@ -143,7 +181,14 @@ font-family: 'Open Sans', sans-serif;
 
 .btn-modify-project {
   margin-left: 15px;
+  color: rgba(0,0,0,0.3);
+  font-size: 14px;
 }
+
+.btn-modify-project:hover {
+  color: rgba(0,0,0,1);
+}
+
 
 #btn-add-project {
   margin-top: 10px;
