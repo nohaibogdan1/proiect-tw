@@ -12,10 +12,14 @@ color: rgba(0, 0, 0, 0.87);
 }
 
 
+button {
+  font-family: 'Open Sans', sans-serif;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
 }
+
 
 h5 {
   font-size: 14px;
@@ -124,11 +128,25 @@ font-family: 'Open Sans', sans-serif;
 
 
 
-#left-menu #btn-close-left-menu {
+ #btn-close-left-menu {
   margin-top: 10px;
   bottom: 5px;
   background-color: #ff77a9;
+  padding-top: 2px;
+  /*width: 160px;*/
+  width: 60%;
+  text-align: center;
+  border:0;
 }
+
+#btn-close-left-menu:active {
+  border: 0;
+  background-color: #c9457a;
+}
+#btn-close-left-menu:focus {
+  outline: none;
+}
+
 
 .task-brief {
   display: flex;
@@ -183,16 +201,36 @@ font-family: 'Open Sans', sans-serif;
   margin-left: 15px;
   color: rgba(0,0,0,0.3);
   font-size: 14px;
+  border:none;
+  background-color: transparent;
 }
+
 
 .btn-modify-project:hover {
   color: rgba(0,0,0,1);
 }
 
+.btn-modify-project:focus {
+  outline: none;
+}
+
 
 #btn-add-project {
   margin-top: 10px;
-  background-color: #ec407a;
+  background-color: transparent;
+  border-color: #ff77a9;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 11px;
+  width: 60%;
+}
+
+#btn-add-project:active {
+  border-color: #c9457a;
+}
+
+#btn-add-project:focus {
+  outline: none;
 }
 
 
