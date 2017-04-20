@@ -184,11 +184,11 @@ font-family: 'Open Sans', sans-serif;
  flex-direction: row;
  /*border-style: solid;*/
  /*border-width: 2px 0px 2px 0px;*/
- /*background-color: rgba(200, 236, 200, 0.5);*/
+ background-color: #B3E5FC;
+
  width: 100%;
  margin-bottom: 10px;
  padding-bottom: 5px;
- /*background-color: #E0E0DD;*/
 }
 
 .title-task, .project-name {
