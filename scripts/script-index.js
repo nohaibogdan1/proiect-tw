@@ -13,6 +13,25 @@ var map = document.getElementById("map");
 
 
 
+
+
+//aici va trebui sa initializez denumirea proiectelor, nr de taskuri
+function initializareCuloriProiecte(){
+	var projectColorList = document.getElementsByClassName("project-color");
+	for (var i = 0; i < projectColorList.length; i++){
+
+		projectColorList[i].style.backgroundColor = "blue";
+	}
+}
+
+window.onload = initializareCuloriProiecte;
+
+
+
+
+
+
+
 function closeLeftMenu (){
 	var leftMenu = document.getElementById("left-menu");
 
@@ -109,17 +128,19 @@ function showSelectDays() {
 nrDays.addEventListener("change", showSelectDays);
 
 
-// adaug codul pentru a crea un form dinamic pentru modificarea unui dintre proiecte
+// adaug codul pentru a crea un div dinamic pentru modificarea unui dintre proiecte
 // cand apas butonul de modificare al unui proiect, proiectul este eliminat din lista,iar in locul sau
-//apare elementul form cu text input default avand denumirea proiectului si color pickerul default avand 
-//culoare proiecutlui
-
+//apare elementul div cu text input default avand denumirea proiectului 
 function addEventListenerClassName(className, eventName, functionName) {
     var listElements = document.getElementsByClassName(className);
     for (var i = 0; i < listElements.length; i++) {
         listElements[i].addEventListener(eventName, functionName, false);
     }
 }
+
+
+
+
 
 
 function cancelModificareProiect(e){
@@ -145,7 +166,7 @@ function cancelModificareProiect(e){
 var modifyDiv = document.createElement("div");
 
 
-function creareModifyForm(modificare, denumireProiectText){
+function creareModifyForm(modificare, denumireProiectText, culoareProiect){
 	//initialiez form
     while (modifyDiv.firstChild) {
     	modifyDiv.removeChild(modifyDiv.firstChild);
@@ -204,6 +225,7 @@ function creareModifyForm(modificare, denumireProiectText){
 
 	if (modificare == 1){
 
+		listOfColors.style.backgroundColor = culoareProiect;
 	    textProjectName.setAttribute('value', denumireProiectText);
 	}
 
@@ -288,16 +310,9 @@ function adaugareFormModificareProiect(e){
 		
 	}
 
-	// alert('1');
-	
     var denumireProiectText = btnModifyClicked.previousElementSibling.children[1].textContent;
-	
-	creareModifyForm(1, denumireProiectText);
-
-
-
-
-    
+    var culoareProiect = btnModifyClicked.previousElementSibling.children[0].children[0].style.backgroundColor;
+	creareModifyForm(1, denumireProiectText, culoareProiect);
 
     containerProjectsList.insertBefore(modifyDiv, btnModifyClicked.parentNode);
 

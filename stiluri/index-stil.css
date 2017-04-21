@@ -442,8 +442,6 @@ font-family: 'Open Sans', sans-serif;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-
-
       width: 100vw;
       overflow: hidden;
       position: absolute;
@@ -463,12 +461,19 @@ font-family: 'Open Sans', sans-serif;
 
       padding-bottom: 55px;
       height: auto;
+      background-color: transparent;
+      /*overflow-y: scroll;*/
+      overflow: auto;
+      visibility: hidden;
 
-      overflow-y: scroll;
+    }
 
+    #left-menu-continut{
+      visibility: visible;
 
-
-
+    }
+    #left-menu:hover {
+      visibility: visible;
     }
 
 
@@ -495,12 +500,19 @@ font-family: 'Open Sans', sans-serif;
       position: relative;
       flex: 2;
       z-index: 0;
-
-      overflow-y: scroll;
+      overflow: auto;
+      visibility: hidden;
 
       height: auto;
       top:0px;
       left:0px;
+    }
+
+    #wrapper-tasks {
+      visibility: visible;
+    }
+    #container-tasks:hover {
+      visibility: visible;
     }
 
 

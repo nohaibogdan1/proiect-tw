@@ -8,8 +8,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7thxYsRnTZ2k_VG4cBZ12ataqXk8lvU&callback=myMap"
-  type="text/javascript"></script>
-  
+	type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -40,26 +40,28 @@
 
 		<!-- aici este meniul din partea stanga ce contine lista cu proiecte si informatii generale in partea de sus  -->
 		<div id="left-menu">
+		<!-- acest div este folosit pentru a crea efectul de aparitie a barei de scroll la hover -->
+		<div id="left-menu-continut">
 			<!-- aici va fi partea de la butonul de inchidere a meniului in sus,
 			vreau ca aici sa aibe loc overflow si scroll ca butonul de inchidere sa ramana in aceeasi pozitie -->
 			<div id="container-top-part">
 
 				<!-- btn pentru today -->
 				<div id="btn-today-tasks" class="task-brief">
-          <div class="container-icon-task-brief">
-            <img class="icon-task-brief" src="images/delivery.svg" width="18px" height="18px" alt="24hrs"/>
-          </div>
-          <div class="text-task-brief">Today</div>
-          <div class="number-tasks-brief">12</div>
+					<div class="container-icon-task-brief">
+						<img class="icon-task-brief" src="images/delivery.svg" width="18px" height="18px" alt="24hrs"/>
+					</div>
+					<div class="text-task-brief">Today</div>
+					<div class="number-tasks-brief">12</div>
 				</div>
 
 				<!-- btn pentru next 7 days -->
 				<div id="btn-7days-tasks" class="task-brief">
-          <div class="container-icon-task-brief">
-            <img class="icon-task-brief" src="images/daily-calendar-on-page-of-day-7.svg" width="18px" height="18px" alt="24hrs"/>
-          </div>
-          <div class="text-task-brief">Next 7 days</div>
-          <div class="number-tasks-brief">32</div>
+					<div class="container-icon-task-brief">
+						<img class="icon-task-brief" src="images/daily-calendar-on-page-of-day-7.svg" width="18px" height="18px" alt="24hrs"/>
+					</div>
+					<div class="text-task-brief">Next 7 days</div>
+					<div class="number-tasks-brief">32</div>
 				</div>
 
 				<!-- aici urmeaza lista de proiecte -->
@@ -127,143 +129,145 @@
 			<button id="btn-close-left-menu">
 				Close menu
 			</button>
-
-		</div>
-
-
-
-
-
-		<!-- aici este containerul care contine taskurile -->
-		<div id="container-tasks">
-			<header id="main-header">
-				<h3 id="title-list-tasks">Today</h3>
-			</header>
-
-			<div id="container-tasks-list">
-
-				<div class="task-item">
-					<div class="btn-done">
-						<img src="images/check-mark.svg" width="20px" height="20px" alt="Done"/>
-					</div>
-					<div class="container-task-info">
-						<div class="title-task">Go buy some shoes dawnfawkrn awnfksenfksefksefmseknfksenfjsengfjsnekgneskgsese,ng,rjkdnkj</div>
-						<div class="container-date-time">
-							<span class="time-task">08:09</span>
-						</div>
-						<div class="project-name">Shoppindmwndkadjkawbjkdbwafg</div>
-					</div>
-					<div class="btn-modify">
-						<img src="images/controls.svg" width="20px" height="20px" alt="Modify"/>
-					</div>
-				</div>
-
-				<div class="task-item">
-					<div class="btn-done">
-						<img src="images/check-mark.svg" width="20px" height="20px" alt="Done"/>
-					</div>
-					<div class="container-task-info">
-						<div class="title-task">Go buy some shoes dawnfawkrn awnfksenfksefksefmseknfksenfjsengfjsnekgneskgsese,ng,rjkdnkj</div>
-						<div class="container-date-time">
-							<span class="time-task">08:09</span>
-						</div>
-						<div class="project-name">Shoppindmwndkadjkawbjkdbwafg</div>
-					</div>
-					<div class="btn-modify">
-						<img src="images/controls.svg" width="20px" height="20px" alt="Modify"/>
-					</div>
-				</div>
-
-				<div class="task-item">
-					<div class="btn-done">
-						<img src="images/check-mark.svg" width="20px" height="20px" alt="Done"/>
-					</div>
-					<div class="container-task-info">
-						<div class="title-task">Go buy some shoes dawnfawkrn awnfksenfksefksefmseknfksenfjsengfjsnekgneskgsese,ng,rjkdnkj</div>
-						<div class="container-date-time">
-							<span class="time-task">08:09</span>
-						</div>
-						<div class="project-name">Shoppindmwndkadjkawbjkdbwafg</div>
-					</div>
-					<div class="btn-modify">
-						<img src="images/controls.svg" width="20px" height="20px" alt="Modify"/>
-					</div>
-				</div>
-
-
-
-			</div>
-
 		</div>
 	</div>
+
+
+
+
+
+	<!-- aici este containerul care contine taskurile -->
+	<div id="container-tasks">
+	<!-- acest wrapper este folosit pentru a crea efectul de aparitie si disparitie a bare de scroll la hover -->
+	<div id="wrapper-tasks">
+		<header id="main-header">
+			<h3 id="title-list-tasks">Today</h3>
+		</header>
+
+		<div id="container-tasks-list">
+
+			<div class="task-item">
+				<div class="btn-done">
+					<img src="images/check-mark.svg" width="20px" height="20px" alt="Done"/>
+				</div>
+				<div class="container-task-info">
+					<div class="title-task">Go buy some shoes dawnfawkrn awnfksenfksefksefmseknfksenfjsengfjsnekgneskgsese,ng,rjkdnkj</div>
+					<div class="container-date-time">
+						<span class="time-task">08:09</span>
+					</div>
+					<div class="project-name">Shoppindmwndkadjkawbjkdbwafg</div>
+				</div>
+				<div class="btn-modify">
+					<img src="images/controls.svg" width="20px" height="20px" alt="Modify"/>
+				</div>
+			</div>
+
+			<div class="task-item">
+				<div class="btn-done">
+					<img src="images/check-mark.svg" width="20px" height="20px" alt="Done"/>
+				</div>
+				<div class="container-task-info">
+					<div class="title-task">Go buy some shoes dawnfawkrn awnfksenfksefksefmseknfksenfjsengfjsnekgneskgsese,ng,rjkdnkj</div>
+					<div class="container-date-time">
+						<span class="time-task">08:09</span>
+					</div>
+					<div class="project-name">Shoppindmwndkadjkawbjkdbwafg</div>
+				</div>
+				<div class="btn-modify">
+					<img src="images/controls.svg" width="20px" height="20px" alt="Modify"/>
+				</div>
+			</div>
+
+			<div class="task-item">
+				<div class="btn-done">
+					<img src="images/check-mark.svg" width="20px" height="20px" alt="Done"/>
+				</div>
+				<div class="container-task-info">
+					<div class="title-task">Go buy some shoes dawnfawkrn awnfksenfksefksefmseknfksenfjsengfjsnekgneskgsese,ng,rjkdnkj</div>
+					<div class="container-date-time">
+						<span class="time-task">08:09</span>
+					</div>
+					<div class="project-name">Shoppindmwndkadjkawbjkdbwafg</div>
+				</div>
+				<div class="btn-modify">
+					<img src="images/controls.svg" width="20px" height="20px" alt="Modify"/>
+				</div>
+			</div>
+
+
+
+		</div>
+		</div>
+	</div>
+</div>
 
 <!-- aici este codul pentru formularul de creare a unui nou task -->
 
 <div id="container-info-add-task" class="close-container-add-task" >
-  <form id="add-task-form">
-    <input id="task-text-input" class="elem-form" type="text" name="task-title" placeholder="e.g. Buy a book" autofocus="autofocus" />
-    <input class="time-date elem-form" type="time" name="time-task"/>
-    <input class="time-date elem-form" type="date" name="date-task"/><br/>
-    <div id="locatie" class="elem-form" >
-      <input type="text" placeholder="descriere locatie"/>
-      <div id="map-btn">
-        <img  src="images/map-icon.svg" width="20"  alt="Map"/>
-      </div>
-    </div>
-    <div id="map" class="elem-form" ></div>
-    <select class="elem-form"  name="activat-dezactiv-task" >
-      <option value="1" selected="selected">Activat</option>
-      <option value="0">Dezactivat</option>
-    </select>
-    <select class="elem-form" name="public-private-task">
-      <option value="0" selected="selected">Privat</option>
-      <option value="1">Public</option>
-    </select>
-    <textarea class="elem-form" >Notes</textarea><br/>
-    <select  class="elem-form"  name="lists-task">
-      <option value="default">Default</option>
-      <option value="personal">Personal</option>
-      <option value="shopping">Shopping</option>
-      <option value="school">School</option>
-    </select><br/>
-    Repeat once in 
-    <input id="nr-days" class="elem-form"  type="number" name="number-days-interval" />
-    <select id="days-weeks-etc" name="days-weeks-etc">
-      <option value="1" selected="selected">Days</option>
-      <option value="2">Weeks</option>
-      <option value="3">Months</option>
-    </select>
-    <br/>
+	<form id="add-task-form">
+		<input id="task-text-input" class="elem-form" type="text" name="task-title" placeholder="e.g. Buy a book" autofocus="autofocus" />
+		<input class="time-date elem-form" type="time" name="time-task"/>
+		<input class="time-date elem-form" type="date" name="date-task"/><br/>
+		<div id="locatie" class="elem-form" >
+			<input type="text" placeholder="descriere locatie"/>
+			<div id="map-btn">
+				<img  src="images/map-icon.svg" width="20"  alt="Map"/>
+			</div>
+		</div>
+		<div id="map" class="elem-form" ></div>
+		<select class="elem-form"  name="activat-dezactiv-task" >
+			<option value="1" selected="selected">Activat</option>
+			<option value="0">Dezactivat</option>
+		</select>
+		<select class="elem-form" name="public-private-task">
+			<option value="0" selected="selected">Privat</option>
+			<option value="1">Public</option>
+		</select>
+		<textarea class="elem-form" >Notes</textarea><br/>
+		<select  class="elem-form"  name="lists-task">
+			<option value="default">Default</option>
+			<option value="personal">Personal</option>
+			<option value="shopping">Shopping</option>
+			<option value="school">School</option>
+		</select><br/>
+		Repeat once in 
+		<input id="nr-days" class="elem-form"  type="number" name="number-days-interval" />
+		<select id="days-weeks-etc" name="days-weeks-etc">
+			<option value="1" selected="selected">Days</option>
+			<option value="2">Weeks</option>
+			<option value="3">Months</option>
+		</select>
+		<br/>
 
-    <div id="specific-days-week" class="elem-form">
-    Selectati zilele
-    <select  class="elem-form specific-days" name="specific-days-week" multiple="multiple">
-      <option value="1">Sunday</option>
-      <option value="2">Monday</option>
-      <option value="3">Tuesday</option>
-      <option value="4">Thursday</option>
-      <option value="5">Wednesday</option>
-      <option value="6">Friday</option>
-      <option value="7">Saturday</option>
-    </select>
-    </div>
+		<div id="specific-days-week" class="elem-form">
+			Selectati zilele
+			<select  class="elem-form specific-days" name="specific-days-week" multiple="multiple">
+				<option value="1">Sunday</option>
+				<option value="2">Monday</option>
+				<option value="3">Tuesday</option>
+				<option value="4">Thursday</option>
+				<option value="5">Wednesday</option>
+				<option value="6">Friday</option>
+				<option value="7">Saturday</option>
+			</select>
+		</div>
 
-    <div id="specific-days-month" class="elem-form">
-    Selectati zilele 
-    <select  class="elem-form specific-days" name="specific-days-month" multiple="multiple">
-      <option value="1">1</option>
-      <option value="2">5</option>
-      <option value="3">10</option>
-      <option value="4">15</option>
-      <option value="5">20</option>
-      <option value="6">25</option>
-      <option value="7">Final of Month</option>
-    </select>
-    </div>
+		<div id="specific-days-month" class="elem-form">
+			Selectati zilele 
+			<select  class="elem-form specific-days" name="specific-days-month" multiple="multiple">
+				<option value="1">1</option>
+				<option value="2">5</option>
+				<option value="3">10</option>
+				<option value="4">15</option>
+				<option value="5">20</option>
+				<option value="6">25</option>
+				<option value="7">Final of Month</option>
+			</select>
+		</div>
 
-    <input type="submit" class="elem-form" name="add-task" value="Ok" />
-    <input id="close-add-task" class="elem-form" type="button" name="cancel-all" value="Cancel"/> 
-  </form>
+		<input type="submit" class="elem-form" name="add-task" value="Ok" />
+		<input id="close-add-task" class="elem-form" type="button" name="cancel-all" value="Cancel"/> 
+	</form>
 </div>
 <script type="text/javascript" src="scripts/script-index.js"></script>
 
