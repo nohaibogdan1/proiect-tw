@@ -98,6 +98,9 @@ h5 {
 	display: flex;
 	height: 50px;
 	margin-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(0,0,0,0.1);
 }
 
 .friend-item:hover{
@@ -193,6 +196,7 @@ h5 {
 	margin-top: 5px;
 	margin-left: 15px;
 	margin-bottom: 10px;
+
 }
 
 .wrapper-date-hour {
@@ -235,11 +239,16 @@ h5 {
 
 
 	#container-main {
-		overflow-y: scroll;
+		overflow-y: auto;
 		min-width: 210px;
+		max-width: 300px;
 		width: 30vw;
-		
+		visibility: hidden;
 		flex:1;
+	}
+
+	#wrapper-main, #container-main:hover{
+		visibility: visible;
 	}
 
 
@@ -280,6 +289,15 @@ h5 {
 		height: 40px;
 	}
 
+
+#container-friend-tasks {
+		overflow: auto;
+		visibility: hidden;
+	}
+
+	#wrapper-friend-tasks, #container-friend-tasks:hover {
+		visibility: visible;
+	}
 
 
 	#container-main, #container-friend-tasks {
