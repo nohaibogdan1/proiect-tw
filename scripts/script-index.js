@@ -36,43 +36,44 @@ function initializare(){
 //creez un array de obiecte proiect
 var listaProiecte = [
 	{
-		projectColor1: "blue",
+		projectColor1: "#2196F3",//blue
+		taskColor1: "#BBDEFB",
 		projectName1: "School",
 		projectNrTasks1: 10
 	},
 
 	{
-		projectColor1: "red",
+		projectColor1: "#F44336",//red
+		taskColor1: "#FFCDD2",
 		projectName1: "Personal",
 		projectNrTasks1: 13
 	},
 	{
-		projectColor1: "green",
+		projectColor1: "#4CAF50",//green
+		taskColor1: "#C8E6C9",
 		projectName1: "Shopping",
 		projectNrTasks1: 2
 	},
 	{
-		projectColor1: "yellow",
-		projectName1: "Personal",
+		projectColor1: "#673AB7",//deep purple
+		taskColor1: "#D1C4E9",
+		projectName1: "Reading",
 		projectNrTasks1: 13
 	},
 	{
-		projectColor1: "red",
-		projectName1: "Tehnolofii Web",
+		projectColor1: "#FF9800",//orange
+		taskColor1: "#FFE0B2",
+		projectName1: "Tehnologii Web",
 		projectNrTasks1: 20
 	},
 	{
-		projectColor1: "indigo",
-		projectName1: "Reading",
-		projectNrTasks1: 9
-	},
-	{
-		projectColor1: "brown",
+		projectColor1: "#009688",//teal
+		taskColor1: "#B2DFDB",
 		projectName1: "Sport",
-		projectNrTasks1: 5
-	},
-
+		projectNrTasks1: 9
+	}
 ];
+
 
 
 
@@ -175,10 +176,32 @@ var listaTaskuri = [
 		taskTitle: "Citesc despre JavaScript",
 		taskTime: "22:10",
 		projectName1: "Tehnologii Web"
+	},
+
+	{
+		taskTitle: "Ma intalnesc cu Andrei",
+		taskTime: "22:10",
+		projectName1: "Default"
 	}
+
 ];
 
 
+function dezactivareTask(e){
+	 var btnDone;
+    //internet explorer 6-8
+    if (e.srcElement){
+    	btnDone = e.srcElement;
+    }
+    //celelalte browsere
+    else if (e.target){
+    	btnDone = e.target;
+    }
+
+    
+    btnDone.parentNode.parentNode.remove();
+
+}
 
 function initializareTaskuri() {
 	var containerTasksList = document.getElementById("container-tasks-list");
@@ -188,6 +211,13 @@ function initializareTaskuri() {
 
 		var taskItem = document.createElement("div");
 		taskItem.classList.add("task-item");
+
+		for (var j = 0; j < listaProiecte.length; j++){
+			if (listaProiecte[j].projectName1 == listaTaskuri[i].projectName1){
+				taskItem.style.backgroundColor = listaProiecte[j].taskColor1;
+				break;
+			}
+		}
 
 		var btnDone = document.createElement("div");
 		btnDone.classList.add("btn-done");
@@ -199,6 +229,7 @@ function initializareTaskuri() {
 		imgDone.setAttribute('height', "20px");
 		imgDone.setAttribute('alt', "Done");
 		btnDone.appendChild(imgDone);
+		btnDone.addEventListener("click", dezactivareTask);
 
 		taskItem.appendChild(btnDone);
 
