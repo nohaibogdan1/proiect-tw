@@ -4,265 +4,84 @@
 	<title>friends page</title>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet"  href="stiluri/friends-stil.css" type="text/css">
+  <link rel="stylesheet"  href="stiluri/friends-stil.css" type="text/css">
 </head>
 <body>
 
   <div id="nav-container">
   	<nav id="nav-bar">
-      	<a id="btn-home" href="index.html">
-      		<img src="images/home-icon-2.svg" alt="home" width="20px" height="20px"/>
-      	</a>
+     <a id="btn-home" href="index.html">
+      <img src="images/home-icon-2.svg" alt="home" width="20px" height="20px"/>
+    </a>
 
-      	<a id="btn-friends" href="">
-      		<img src="images/friends-icon.svg" alt="friends" width="20px" height="20px"/>
-      	</a>
+    <a id="btn-friends" href="">
+      <img src="images/friends-icon.svg" alt="friends" width="20px" height="20px"/>
+    </a>
 
-      	<a id="btn-more-friends" href="more-friends.html">
-      		<img src="images/add-friend-icon.svg" alt="more friends" width="20px" height="20px"/>
-      	</a>
+    <a id="btn-more-friends" href="more-friends.html">
+      <img src="images/add-friend-icon.svg" alt="more friends" width="20px" height="20px"/>
+    </a>
 
-      	<div id="btn-get-info">
-      		<img src="images/get-info-icon-2.svg" alt="get info" width="20px" height="20px"/>
-      	</div>
-    	</nav>
-  </div>
+    <div id="btn-get-info">
+      <img src="images/get-info-icon-2.svg" alt="get info" width="20px" height="20px"/>
+    </div>
+  </nav>
+</div>
 
-  	<div id="container-all">
-  	<div id="container-main">
-  	<!-- bara pentru cautarea prietenilor -->
-  		<div id="search-bar-container">
-  			<div id="search-bar-text">
-  				Search bar
-  			</div>
-  			<div id="btn-search-bar">
-  				<img src="images/search-icon.svg" alt="search" width="20px" height="20px"/>
-  			</div>
-  		</div>
-
-  		
-  		<!-- continutul cu prieteni -->
-  		<form id="container-friends">
-
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-  			<div class="friend-item">
-  				<input class="check" type="checkbox"/>
-  				<div class="friend-picture">
-  					<img src="images/friend-picture.png" alt="picture" width="40px" height="40px"/>
-  				</div>
-  				<div class="friend-name">
-  					Nohai Bogdan
-  				</div>
-  			</div>
-           
-            <div id="container-options-info">
-	  			<input id="btn-ok-info" type="submit" value="Ok       "/>
-	  			 <div id="btn-cancel-info">
-	            	Cancel
-	            </div>
-  			</div>
-
-  		</form>
-  		
-
-  	</div>
+<!-- meniul pentru ok cancel info -->
+<div id="container-options-info">
+  <button id="btn-ok-info" class="button-info">Ok</button>
+  <button id="btn-cancel-info" class="button-info"> Cancel</button>
+</div>
 
 
-  	
-  	<div id="container-friend-tasks">
-  			<div class="options">
-  				<div id="btn-delete">
-  					Delete friend
-  				</div>
-  				<div id="btn-close">
-  					Close
-  				</div>
-  			</div>
-  			<div class="task-friend">
-	  			<div class="denumire-task-friend">
-	  				Merg la intrunirea javascript
-	  			</div>
-	  			<div class="locatie-task-friend">
-	  				Facultatea de informatica
-	  			</div>
-	  			<div class="wrapper-date-hour">
-		  			<div class="date-task-friend">
-		  				29-05-2017
-		  			</div>
-		  			<div class="hour-task-friend">
-		  				19:00 - 21:00
-		  			</div>
-	  			</div>
-	  			<div class="btn-add-task-friend">
-		  				Add task
-		  		</div>
-  			</div>
+<div id="container-all">
 
-  			<div class="task-friend">
-	  			<div class="denumire-task-friend">
-	  				Merg la intrunirea javascript
-	  			</div>
-	  			<div class="locatie-task-friend">
-	  				Facultatea de informatica
-	  			</div>
-	  			<div class="wrapper-date-hour">
-		  			<div class="date-task-friend">
-		  				29-05-2017
-		  			</div>
-		  			<div class="hour-task-friend">
-		  				19:00 - 21:00
-		  			</div>
-	  			</div>
-	  			<div class="btn-add-task-friend">
-		  				Add task
-		  		</div>
-  			</div>
-  			<div class="task-friend">
-	  			<div class="denumire-task-friend">
-	  				Merg la intrunirea javascript
-	  			</div>
-	  			<div class="locatie-task-friend">
-	  				Facultatea de informatica
-	  			</div>
-	  			<div class="wrapper-date-hour">
-		  			<div class="date-task-friend">
-		  				29-05-2017
-		  			</div>
-		  			<div class="hour-task-friend">
-		  				19:00 - 21:00
-		  			</div>
-	  			</div>
-	  			<div class="btn-add-task-friend">
-		  				Add task
-		  		</div>
-  			</div>
-  			<div class="task-friend">
-	  			<div class="denumire-task-friend">
-	  				Merg la intrunirea javascript
-	  			</div>
-	  			<div class="locatie-task-friend">
-	  				Facultatea de informatica
-	  			</div>
-	  			<div class="wrapper-date-hour">
-		  			<div class="date-task-friend">
-		  				29-05-2017
-		  			</div>
-		  			<div class="hour-task-friend">
-		  				19:00 - 21:00
-		  			</div>
-	  			</div>
-	  			<div class="btn-add-task-friend">
-		  				Add task
-		  		</div>
-  			</div>
+         <div id="container-main">
+            <div id="wrapper-main">
+                   <!-- bara pentru cautarea prietenilor -->
+                   <div id="search-bar-container">
+                     <div id="search-bar-text">
+                      Search bar
+                    </div>
+                    <div id="btn-search-bar">
+                      <img src="images/search-icon.svg" alt="search" width="20px" height="20px"/>
+                    </div>
+                  </div>
 
-  			<div class="task-friend">
-	  			<div class="denumire-task-friend">
-	  				Merg la intrunirea javascript
-	  			</div>
-	  			<div class="locatie-task-friend">
-	  				Facultatea de informatica
-	  			</div>
-	  			<div class="wrapper-date-hour">
-		  			<div class="date-task-friend">
-		  				29-05-2017
-		  			</div>
-		  			<div class="hour-task-friend">
-		  				19:00 - 21:00
-		  			</div>
-	  			</div>
-	  			<div class="btn-add-task-friend">
-		  				Add task
-		  		</div>
-  			</div>
-  			
-  		</div>
-  	</div>
+                    <!-- continutul cu prieteni -->
+                    <div id="container-friends-list">
+                    </div>
+            </div>
+        </div>
 
+
+
+
+
+    <div id="container-friend-tasks">
+        <div id="wrapper-friend-tasks">
+            <div class="options">
+                <div id="btn-delete">Delete friend</div>
+                <div id="btn-close">Close</div>
+            </div>
+
+            <div id="task-friend-list">
+                <div class="task-friend">
+                    <div class="denumire-task-friend">Merg la intrunirea javascript</div>
+                    <div class="locatie-task-friend">Facultatea de informatica</div>
+                    <div class="wrapper-date-hour">
+                        <div class="date-task-friend">29-05-2017</div>
+                        <div class="hour-task-friend">19:00 - 21:00</div>
+                    </div>
+                    <button class="btn-add-task-friend">Add task</button>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
 
