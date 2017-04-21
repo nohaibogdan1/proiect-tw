@@ -12,7 +12,7 @@ var mapBtn = document.getElementById("map-btn");
 var map = document.getElementById("map");
 
 
-
+window.onload = initializare;
 
 
 //aici va trebui sa initializez denumirea proiectelor, nr de taskuri
@@ -24,11 +24,222 @@ function initializareCuloriProiecte(){
 	}
 }
 
-window.onload = initializareCuloriProiecte;
 
 
 
+function initializare(){
+	initializareProiecte();
+	initializareTaskuri();
+}
 
+
+//creez un array de obiecte proiect
+var listaProiecte = [
+	{
+		projectColor1: "blue",
+		projectName1: "School",
+		projectNrTasks1: 10
+	},
+
+	{
+		projectColor1: "red",
+		projectName1: "Personal",
+		projectNrTasks1: 13
+	},
+	{
+		projectColor1: "green",
+		projectName1: "Shopping",
+		projectNrTasks1: 2
+	},
+	{
+		projectColor1: "yellow",
+		projectName1: "Personal",
+		projectNrTasks1: 13
+	},
+	{
+		projectColor1: "red",
+		projectName1: "Tehnolofii Web",
+		projectNrTasks1: 20
+	},
+	{
+		projectColor1: "indigo",
+		projectName1: "Reading",
+		projectNrTasks1: 9
+	},
+	{
+		projectColor1: "brown",
+		projectName1: "Sport",
+		projectNrTasks1: 5
+	},
+
+];
+
+
+
+function initializareProiecte() {
+	var containerProjectsList = document.getElementById("container-projects-list");
+	//informatiile vor fi luate din baza de date
+
+	for (var i = 0; i < listaProiecte.length; i++){
+		var projectItem = document.createElement("div");
+		projectItem.classList.add("project-item");
+
+		var projectInfo = document.createElement("div");
+		projectInfo.classList.add("project-info");
+
+		var containerProjectColor = document.createElement("div");
+		containerProjectColor.classList.add("container-project-color");
+
+		var projectColor = document.createElement("div");
+		projectColor.classList.add("project-color");
+		projectColor.style.backgroundColor = listaProiecte[i].projectColor1;
+		containerProjectColor.appendChild(projectColor);
+
+		projectInfo.appendChild(containerProjectColor);
+
+		var projectName = document.createElement("div");
+		projectName.classList.add("project-name");
+		projectName.textContent = listaProiecte[i].projectName1;
+
+		projectInfo.appendChild(projectName);
+
+		var projectNrTasks = document.createElement("div");
+		projectNrTasks.classList.add("project-nr-tasks");
+		projectNrTasks.textContent = listaProiecte[i].projectNrTasks1;
+
+		projectInfo.appendChild(projectNrTasks);
+
+		projectItem.appendChild(projectInfo);
+
+		var btnModifyProject = document.createElement("button");
+		btnModifyProject.classList.add("btn-modify-project");
+		btnModifyProject.textContent = "...";
+		btnModifyProject.addEventListener("click", adaugareFormModificareProiect);
+
+		projectItem.appendChild(btnModifyProject);
+
+		containerProjectsList.appendChild(projectItem);
+
+
+	}
+
+}
+
+
+//creez un array de taskuri
+
+var listaTaskuri = [
+	{
+		taskTitle: "Merg la sala",
+		taskTime: "09:10",
+		projectName1: "Sport"
+	},
+
+	{
+		taskTitle: "Cumpar un kg de mere",
+		taskTime: "12:10",
+		projectName1: "Shopping"
+	},
+
+	{
+		taskTitle: "Ma joc cu pisica",
+		taskTime: "14:00",
+		projectName1: "Personal"
+	},
+
+	{
+		taskTitle: "Citesc despre fotografie",
+		taskTime: "15:10",
+		projectName1: "Reading"
+	},
+
+	{
+		taskTitle: "Citesc Anna Karenina",
+		taskTime: "17:10",
+		projectName1: "Reading"
+	},
+
+	{
+		taskTitle: "Cumpar un pulover",
+		taskTime: "18:10",
+		projectName1: "Shopping"
+	},
+
+	{
+		taskTitle: "Lucrez la proiect",
+		taskTime: "20:10",
+		projectName1: "Tehnologii Web"
+	},
+
+	{
+		taskTitle: "Citesc despre JavaScript",
+		taskTime: "22:10",
+		projectName1: "Tehnologii Web"
+	}
+];
+
+
+
+function initializareTaskuri() {
+	var containerTasksList = document.getElementById("container-tasks-list");
+
+	for (var i = 0; i < listaTaskuri.length; i++){
+
+
+		var taskItem = document.createElement("div");
+		taskItem.classList.add("task-item");
+
+		var btnDone = document.createElement("div");
+		btnDone.classList.add("btn-done");
+		
+
+		var imgDone = document.createElement("img");
+		imgDone.setAttribute('src', "images/check-mark.svg");
+		imgDone.setAttribute('width', "20px");
+		imgDone.setAttribute('height', "20px");
+		imgDone.setAttribute('alt', "Done");
+		btnDone.appendChild(imgDone);
+
+		taskItem.appendChild(btnDone);
+
+		var containerTaskInfo = document.createElement("div");
+		containerTaskInfo.classList.add("container-task-info");
+
+		var titleTask = document.createElement("div");
+		titleTask.classList.add("title-task");
+		titleTask.textContent = listaTaskuri[i].taskTitle;
+		containerTaskInfo.appendChild(titleTask);
+
+		var containerDateTime = document.createElement("div");
+		containerDateTime.classList.add("container-date-time");
+		containerDateTime.textContent = listaTaskuri[i].taskTime;
+		containerTaskInfo.appendChild(containerDateTime);
+
+		var projectName = document.createElement("div");
+		projectName.classList.add("project-name");
+		projectName.textContent = listaTaskuri[i].projectName1;
+		containerTaskInfo.appendChild(projectName);
+
+		taskItem.appendChild(containerTaskInfo);
+
+
+		var btnModifyTask = document.createElement("div");
+		btnModifyTask.classList.add("btn-modify");
+
+		var imgModify = document.createElement("img");
+		imgModify.setAttribute('src', "images/controls.svg");
+		imgModify.setAttribute('width', "20px");
+		imgModify.setAttribute('height', "20px");
+		imgModify.setAttribute('alt', "Modify");
+
+		btnModifyTask.appendChild(imgModify);
+
+		taskItem.appendChild(btnModifyTask);
+
+		containerTasksList.appendChild(taskItem);
+
+	}
+}
 
 
 
