@@ -12,6 +12,267 @@ var mapBtn = document.getElementById("map-btn");
 var map = document.getElementById("map");
 
 
+window.onload = initializare;
+
+
+//aici va trebui sa initializez denumirea proiectelor, nr de taskuri
+function initializareCuloriProiecte(){
+	var projectColorList = document.getElementsByClassName("project-color");
+	for (var i = 0; i < projectColorList.length; i++){
+
+		projectColorList[i].style.backgroundColor = "blue";
+	}
+}
+
+
+
+
+function initializare(){
+	initializareProiecte();
+	initializareTaskuri();
+}
+
+
+//creez un array de obiecte proiect
+var listaProiecte = [
+	{
+		projectColor1: "#2196F3",//blue
+		taskColor1: "#BBDEFB",
+		projectName1: "School",
+		projectNrTasks1: 10
+	},
+
+	{
+		projectColor1: "#F44336",//red
+		taskColor1: "#FFCDD2",
+		projectName1: "Personal",
+		projectNrTasks1: 13
+	},
+	{
+		projectColor1: "#4CAF50",//green
+		taskColor1: "#C8E6C9",
+		projectName1: "Shopping",
+		projectNrTasks1: 2
+	},
+	{
+		projectColor1: "#673AB7",//deep purple
+		taskColor1: "#D1C4E9",
+		projectName1: "Reading",
+		projectNrTasks1: 13
+	},
+	{
+		projectColor1: "#FF9800",//orange
+		taskColor1: "#FFE0B2",
+		projectName1: "Tehnologii Web",
+		projectNrTasks1: 20
+	},
+	{
+		projectColor1: "#009688",//teal
+		taskColor1: "#B2DFDB",
+		projectName1: "Sport",
+		projectNrTasks1: 9
+	}
+];
+
+
+
+
+function initializareProiecte() {
+	var containerProjectsList = document.getElementById("container-projects-list");
+	//informatiile vor fi luate din baza de date
+
+	for (var i = 0; i < listaProiecte.length; i++){
+		var projectItem = document.createElement("div");
+		projectItem.classList.add("project-item");
+
+		var projectInfo = document.createElement("div");
+		projectInfo.classList.add("project-info");
+
+		var containerProjectColor = document.createElement("div");
+		containerProjectColor.classList.add("container-project-color");
+
+		var projectColor = document.createElement("div");
+		projectColor.classList.add("project-color");
+		projectColor.style.backgroundColor = listaProiecte[i].projectColor1;
+		containerProjectColor.appendChild(projectColor);
+
+		projectInfo.appendChild(containerProjectColor);
+
+		var projectName = document.createElement("div");
+		projectName.classList.add("project-name");
+		projectName.textContent = listaProiecte[i].projectName1;
+
+		projectInfo.appendChild(projectName);
+
+		var projectNrTasks = document.createElement("div");
+		projectNrTasks.classList.add("project-nr-tasks");
+		projectNrTasks.textContent = listaProiecte[i].projectNrTasks1;
+
+		projectInfo.appendChild(projectNrTasks);
+
+		projectItem.appendChild(projectInfo);
+
+		var btnModifyProject = document.createElement("button");
+		btnModifyProject.classList.add("btn-modify-project");
+		btnModifyProject.textContent = "...";
+		btnModifyProject.addEventListener("click", adaugareFormModificareProiect);
+
+		projectItem.appendChild(btnModifyProject);
+
+		containerProjectsList.appendChild(projectItem);
+
+
+	}
+
+}
+
+
+//creez un array de taskuri
+
+var listaTaskuri = [
+	{
+		taskTitle: "Merg la sala",
+		taskTime: "09:10",
+		projectName1: "Sport"
+	},
+
+	{
+		taskTitle: "Cumpar un kg de mere",
+		taskTime: "12:10",
+		projectName1: "Shopping"
+	},
+
+	{
+		taskTitle: "Ma joc cu pisica",
+		taskTime: "14:00",
+		projectName1: "Personal"
+	},
+
+	{
+		taskTitle: "Citesc despre fotografie",
+		taskTime: "15:10",
+		projectName1: "Reading"
+	},
+
+	{
+		taskTitle: "Citesc Anna Karenina",
+		taskTime: "17:10",
+		projectName1: "Reading"
+	},
+
+	{
+		taskTitle: "Cumpar un pulover",
+		taskTime: "18:10",
+		projectName1: "Shopping"
+	},
+
+	{
+		taskTitle: "Lucrez la proiect",
+		taskTime: "20:10",
+		projectName1: "Tehnologii Web"
+	},
+
+	{
+		taskTitle: "Citesc despre JavaScript",
+		taskTime: "22:10",
+		projectName1: "Tehnologii Web"
+	},
+
+	{
+		taskTitle: "Ma intalnesc cu Andrei",
+		taskTime: "22:10",
+		projectName1: "Default"
+	}
+
+];
+
+
+function dezactivareTask(e){
+	 var btnDone;
+    //internet explorer 6-8
+    if (e.srcElement){
+    	btnDone = e.srcElement;
+    }
+    //celelalte browsere
+    else if (e.target){
+    	btnDone = e.target;
+    }
+
+    
+    btnDone.parentNode.parentNode.remove();
+
+}
+
+function initializareTaskuri() {
+	var containerTasksList = document.getElementById("container-tasks-list");
+
+	for (var i = 0; i < listaTaskuri.length; i++){
+
+
+		var taskItem = document.createElement("div");
+		taskItem.classList.add("task-item");
+
+		for (var j = 0; j < listaProiecte.length; j++){
+			if (listaProiecte[j].projectName1 == listaTaskuri[i].projectName1){
+				taskItem.style.backgroundColor = listaProiecte[j].taskColor1;
+				break;
+			}
+		}
+
+		var btnDone = document.createElement("div");
+		btnDone.classList.add("btn-done");
+		
+
+		var imgDone = document.createElement("img");
+		imgDone.setAttribute('src', "images/check-mark.svg");
+		imgDone.setAttribute('width', "20px");
+		imgDone.setAttribute('height', "20px");
+		imgDone.setAttribute('alt', "Done");
+		btnDone.appendChild(imgDone);
+		btnDone.addEventListener("click", dezactivareTask);
+
+		taskItem.appendChild(btnDone);
+
+		var containerTaskInfo = document.createElement("div");
+		containerTaskInfo.classList.add("container-task-info");
+
+		var titleTask = document.createElement("div");
+		titleTask.classList.add("title-task");
+		titleTask.textContent = listaTaskuri[i].taskTitle;
+		containerTaskInfo.appendChild(titleTask);
+
+		var containerDateTime = document.createElement("div");
+		containerDateTime.classList.add("container-date-time");
+		containerDateTime.textContent = listaTaskuri[i].taskTime;
+		containerTaskInfo.appendChild(containerDateTime);
+
+		var projectName = document.createElement("div");
+		projectName.classList.add("project-name");
+		projectName.textContent = listaTaskuri[i].projectName1;
+		containerTaskInfo.appendChild(projectName);
+
+		taskItem.appendChild(containerTaskInfo);
+
+
+		var btnModifyTask = document.createElement("div");
+		btnModifyTask.classList.add("btn-modify");
+
+		var imgModify = document.createElement("img");
+		imgModify.setAttribute('src', "images/controls.svg");
+		imgModify.setAttribute('width', "20px");
+		imgModify.setAttribute('height', "20px");
+		imgModify.setAttribute('alt', "Modify");
+
+		btnModifyTask.appendChild(imgModify);
+
+		taskItem.appendChild(btnModifyTask);
+
+		containerTasksList.appendChild(taskItem);
+
+	}
+}
+
+
 
 function closeLeftMenu (){
 	var leftMenu = document.getElementById("left-menu");
@@ -109,17 +370,19 @@ function showSelectDays() {
 nrDays.addEventListener("change", showSelectDays);
 
 
-// adaug codul pentru a crea un form dinamic pentru modificarea unui dintre proiecte
+// adaug codul pentru a crea un div dinamic pentru modificarea unui dintre proiecte
 // cand apas butonul de modificare al unui proiect, proiectul este eliminat din lista,iar in locul sau
-//apare elementul form cu text input default avand denumirea proiectului si color pickerul default avand 
-//culoare proiecutlui
-
+//apare elementul div cu text input default avand denumirea proiectului 
 function addEventListenerClassName(className, eventName, functionName) {
     var listElements = document.getElementsByClassName(className);
     for (var i = 0; i < listElements.length; i++) {
         listElements[i].addEventListener(eventName, functionName, false);
     }
 }
+
+
+
+
 
 
 function cancelModificareProiect(e){
@@ -141,14 +404,14 @@ function cancelModificareProiect(e){
 }
 
 
-var modifyForm = document.createElement("form");
+// var modifyForm = document.createElement("form");
+var modifyDiv = document.createElement("div");
 
 
-
-function creareModifyForm(modificare, denumireProiectText){
+function creareModifyForm(modificare, denumireProiectText, culoareProiect){
 	//initialiez form
-    while (modifyForm.firstChild) {
-    	modifyForm.removeChild(modifyForm.firstChild);
+    while (modifyDiv.firstChild) {
+    	modifyDiv.removeChild(modifyDiv.firstChild);
 	}
 	var listOfColors = document.createElement("select");
 
@@ -204,6 +467,7 @@ function creareModifyForm(modificare, denumireProiectText){
 
 	if (modificare == 1){
 
+		listOfColors.style.backgroundColor = culoareProiect;
 	    textProjectName.setAttribute('value', denumireProiectText);
 	}
 
@@ -211,19 +475,15 @@ function creareModifyForm(modificare, denumireProiectText){
 	textProjectName.style.marginLeft="10px";
     
 
-
-    var btnOk = document.createElement("input");
-    btnOk.setAttribute('type',"submit");
-    btnOk.setAttribute('name', "modificareProiect");
+    var btnOk = document.createElement("button");
+    btnOk.textContent = "Ok";
     btnOk.setAttribute('value', "Ok");
     btnOk.classList.add('btn-form-modify');
 
     
 
-    var btnCancel = document.createElement("input");
-    btnCancel.setAttribute('type', "button");
-    btnCancel.setAttribute('name', "cancelModificare");
-    btnCancel.setAttribute('value', "Cancel");
+    var btnCancel = document.createElement("button");
+    btnCancel.textContent = "Cancel";
     btnCancel.setAttribute('id', "btnCancelModificare");
     btnCancel.classList.add('btn-form-modify');
     btnCancel.addEventListener("click", cancelModificareProiect);
@@ -243,19 +503,17 @@ function creareModifyForm(modificare, denumireProiectText){
 	btnsDiv.appendChild(btnOk);
 	btnsDiv.appendChild(btnCancel);
 	if (modificare == 1){
-		var btnDelete = document.createElement("input");
-	    btnDelete.setAttribute('type', "submit");
-	    btnDelete.setAttribute('name', "deleteProiect");
-	    btnDelete.setAttribute('value', "Delete");
+		var btnDelete = document.createElement("button");
+	    btnDelete.textContent = "Delete";
 	    btnDelete.classList.add('btn-form-modify');
 		btnsDiv.appendChild(btnDelete);
     }
 
-	modifyForm.appendChild(infoDiv);
-	modifyForm.appendChild(btnsDiv);
+	modifyDiv.appendChild(infoDiv);
+	modifyDiv.appendChild(btnsDiv);
 
 
-	modifyForm.style.marginBottom="8px";
+	modifyDiv.style.marginBottom="8px";
 
 }
 
@@ -294,21 +552,11 @@ function adaugareFormModificareProiect(e){
 		
 	}
 
-	// alert('1');
-	
     var denumireProiectText = btnModifyClicked.previousElementSibling.children[1].textContent;
-	
-	creareModifyForm(1, denumireProiectText);
+    var culoareProiect = btnModifyClicked.previousElementSibling.children[0].children[0].style.backgroundColor;
+	creareModifyForm(1, denumireProiectText, culoareProiect);
 
-
-
-
-
-    btnModifyClicked.previousElementSibling.children[0].children[0].style.backgroundColor="red";
-
-    
-
-    containerProjectsList.insertBefore(modifyForm, btnModifyClicked.parentNode);
+    containerProjectsList.insertBefore(modifyDiv, btnModifyClicked.parentNode);
 
     // btnModifyClicked.parentNode.remove();
     btnModifyClicked.parentNode.style.display="none";
@@ -335,7 +583,7 @@ function adaugareFormCreareProiect(){
 
 	creareModifyForm(0);
     
-    containerProjectsList.appendChild(modifyForm);
+    containerProjectsList.appendChild(modifyDiv);
 }
 
 
