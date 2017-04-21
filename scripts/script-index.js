@@ -141,14 +141,14 @@ function cancelModificareProiect(e){
 }
 
 
-var modifyForm = document.createElement("form");
-
+// var modifyForm = document.createElement("form");
+var modifyDiv = document.createElement("div");
 
 
 function creareModifyForm(modificare, denumireProiectText){
 	//initialiez form
-    while (modifyForm.firstChild) {
-    	modifyForm.removeChild(modifyForm.firstChild);
+    while (modifyDiv.firstChild) {
+    	modifyDiv.removeChild(modifyDiv.firstChild);
 	}
 	var listOfColors = document.createElement("select");
 
@@ -211,19 +211,15 @@ function creareModifyForm(modificare, denumireProiectText){
 	textProjectName.style.marginLeft="10px";
     
 
-
-    var btnOk = document.createElement("input");
-    btnOk.setAttribute('type',"submit");
-    btnOk.setAttribute('name', "modificareProiect");
+    var btnOk = document.createElement("button");
+    btnOk.textContent = "Ok";
     btnOk.setAttribute('value', "Ok");
     btnOk.classList.add('btn-form-modify');
 
     
 
-    var btnCancel = document.createElement("input");
-    btnCancel.setAttribute('type', "button");
-    btnCancel.setAttribute('name', "cancelModificare");
-    btnCancel.setAttribute('value', "Cancel");
+    var btnCancel = document.createElement("button");
+    btnCancel.textContent = "Cancel";
     btnCancel.setAttribute('id', "btnCancelModificare");
     btnCancel.classList.add('btn-form-modify');
     btnCancel.addEventListener("click", cancelModificareProiect);
@@ -243,19 +239,17 @@ function creareModifyForm(modificare, denumireProiectText){
 	btnsDiv.appendChild(btnOk);
 	btnsDiv.appendChild(btnCancel);
 	if (modificare == 1){
-		var btnDelete = document.createElement("input");
-	    btnDelete.setAttribute('type', "submit");
-	    btnDelete.setAttribute('name', "deleteProiect");
-	    btnDelete.setAttribute('value', "Delete");
+		var btnDelete = document.createElement("button");
+	    btnDelete.textContent = "Delete";
 	    btnDelete.classList.add('btn-form-modify');
 		btnsDiv.appendChild(btnDelete);
     }
 
-	modifyForm.appendChild(infoDiv);
-	modifyForm.appendChild(btnsDiv);
+	modifyDiv.appendChild(infoDiv);
+	modifyDiv.appendChild(btnsDiv);
 
 
-	modifyForm.style.marginBottom="8px";
+	modifyDiv.style.marginBottom="8px";
 
 }
 
@@ -303,12 +297,9 @@ function adaugareFormModificareProiect(e){
 
 
 
-
-    btnModifyClicked.previousElementSibling.children[0].children[0].style.backgroundColor="red";
-
     
 
-    containerProjectsList.insertBefore(modifyForm, btnModifyClicked.parentNode);
+    containerProjectsList.insertBefore(modifyDiv, btnModifyClicked.parentNode);
 
     // btnModifyClicked.parentNode.remove();
     btnModifyClicked.parentNode.style.display="none";
@@ -335,7 +326,7 @@ function adaugareFormCreareProiect(){
 
 	creareModifyForm(0);
     
-    containerProjectsList.appendChild(modifyForm);
+    containerProjectsList.appendChild(modifyDiv);
 }
 
 
