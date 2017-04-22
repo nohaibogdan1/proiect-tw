@@ -563,7 +563,6 @@ font-family: 'Open Sans', sans-serif;
   @media screen and (min-width: 751px){
     #nav-bar {
       max-width: 960px;
-      z-index: 2;
       height: 40px;
       top:0px;
     } 
@@ -575,19 +574,32 @@ font-family: 'Open Sans', sans-serif;
       padding-bottom: 5px;
     }
 
-    #nav-container {
-      background-color: #37c375;
-      height: 40px;
-      width: 100vw;
-      z-index: 5px;
-    }
+   
 
   }
 
   @media screen and (min-width: 961px){
-    #container-all {
-      width: 900px;
+    #wrapper-container-all {
+      width: 800px;
       margin: 0 auto;
+    }
+
+    #container-all {
+      width: 800px
+    }
+
+    #wrapper-nav-bar {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+     #nav-container {
+      position: fixed;
+      top: 0;
+      background-color: #37c375;
+      height: 40px;
+      width: 100vw;
+      z-index: 10;
     }
   }
 

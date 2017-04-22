@@ -36,7 +36,7 @@ h5 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: flex;
+	display: none;
 	height: 10vh;
 	min-height: 40px;
 	max-height: 50px;
@@ -309,6 +309,15 @@ border-color: #c9457a;
 
 
 
+  @media screen and (min-height: 145px){
+    #nav-bar {
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+    }
+  }
+
 
 @media screen  and (min-width: 451px) {
 
@@ -417,18 +426,27 @@ border-color: #c9457a;
 } 
 
 @media screen  and (min-width: 961px) {
-	#da {
-		width: 900px;
+	#wrapper-container-all {
+		width: 960px;
 		margin: 0 auto;
 	}
 
+	#wrapper-nav-bar{
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	#container-all {
+		width: 800px;
+	}
 
 
 	#nav-container {
 		background-color: #37c375;
 		height: 40px;
 		width: 100vw;
-		text-align: center;
+		position: fixed;
+		top: 0px;
 	}
 }
 
