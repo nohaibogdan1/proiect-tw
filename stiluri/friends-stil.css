@@ -394,7 +394,6 @@ border-color: #c9457a;
 	#nav-bar{
 		top:0px;
 		max-width: 960px;
-		z-index: 4;
 		height: 40px;
 	}
 
@@ -410,8 +409,8 @@ border-color: #c9457a;
 
 	#container-main, #container-friend-tasks {
 		padding-bottom: 0px;
-		margin-top: 0px;
-		padding-top: 55px;
+		margin-top: 55px;
+		padding-top: 0px;
 	}
 
 	
@@ -427,7 +426,7 @@ border-color: #c9457a;
 
 @media screen  and (min-width: 961px) {
 	#wrapper-container-all {
-		width: 960px;
+		width: 800px;
 		margin: 0 auto;
 	}
 
@@ -446,6 +445,7 @@ border-color: #c9457a;
 		height: 40px;
 		width: 100vw;
 		position: fixed;
+		z-index: 10;
 		top: 0px;
 	}
 }
