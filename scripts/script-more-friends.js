@@ -5,6 +5,10 @@ function initializareFriends(){
 	var containerFriendsList = document.getElementById("container-friends-list");
 	for (var i = 0; i < 20; i++){
 
+		var containerFriendItem = document.createElement("div");
+		containerFriendItem.classList.add("container-friend-item");
+
+
 		var friendItem = document.createElement("div");
 		friendItem.classList.add("friend-item");
 
@@ -35,10 +39,23 @@ function initializareFriends(){
 
 		friendItem.appendChild(followFriendBtn);
 
+		containerFriendItem.appendChild(friendItem);
+
+		var containerCommonInfo = document.createElement("div");
+		containerCommonInfo.classList.add("container-common-info");
+
+		var titleCommonInfo = document.createElement("h5");
+		titleCommonInfo.textContent = "Ce aveti in comun: ";
+		containerCommonInfo.appendChild(titleCommonInfo);
+		//un for, adaug div pentru fiecare element comun in containerCommonInfo
+
+		var commonInfo = document.createElement("div");
+		commonInfo.textContent = "A participat la intrunirea javascript";
+		containerCommonInfo.appendChild(commonInfo);
+
+		containerFriendItem.appendChild(containerCommonInfo);
 
 
-
-
-		containerFriendsList.appendChild(friendItem);
+		containerFriendsList.appendChild(containerFriendItem);
 	}
 }

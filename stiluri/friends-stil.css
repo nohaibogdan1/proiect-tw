@@ -331,13 +331,13 @@ border-color: #c9457a;
 		min-width: 210px;
 		max-width: 300px;
 		width: 30vw;
-		visibility: hidden;
+		visibility: visible;
 		flex:1;
 	}
 
-	#wrapper-main, #container-main:hover{
+	/*#wrapper-main, #container-main:hover{
 		visibility: visible;
-	}
+	}*/
 
 
 
@@ -392,22 +392,20 @@ border-color: #c9457a;
 
 #container-friend-tasks {
 		overflow: auto;
-		visibility: hidden;
+		visibility: visible;
+		max-width: 550px;
 	}
 
-	#wrapper-friend-tasks, #container-friend-tasks:hover {
-		visibility: visible;
-	}
+	
 
 
 	#container-main, #container-friend-tasks {
 		padding-bottom: 0px;
 		margin-top: 0px;
-	}
-
-	#container-friend-tasks, #container-main {
 		padding-top: 55px;
 	}
+
+	
 
 
 	#container-options-info{
@@ -419,8 +417,8 @@ border-color: #c9457a;
 } 
 
 @media screen  and (min-width: 961px) {
-	#container-all, #nav-bar {
-		width: 960px;
+	#da {
+		width: 900px;
 		margin: 0 auto;
 	}
 
@@ -430,6 +428,7 @@ border-color: #c9457a;
 		background-color: #37c375;
 		height: 40px;
 		width: 100vw;
+		text-align: center;
 	}
 }
 

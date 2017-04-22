@@ -469,7 +469,7 @@ font-family: 'Open Sans', sans-serif;
       height: auto;
       background-color: transparent;
       overflow: auto;
-      visibility: hidden;
+      visibility: visible;
 
     }
 
@@ -481,14 +481,7 @@ font-family: 'Open Sans', sans-serif;
       border-color: rgba(1,1,1,0.2);
     }
 
-    #left-menu-continut{
-      visibility: visible;
-
-    }
-    #left-menu:hover {
-      visibility: visible;
-    }
-
+   
 
     .open-left-menu {
   transition-timing-function: ease;
@@ -524,7 +517,7 @@ font-family: 'Open Sans', sans-serif;
       flex: 2;
       z-index: 0;
       overflow: auto;
-      visibility: hidden;
+      visibility: visible;
 
       height: auto;
       top:0px;
@@ -539,12 +532,12 @@ font-family: 'Open Sans', sans-serif;
     }
 
 
-    #wrapper-tasks {
+   /* #wrapper-tasks {
       visibility: visible;
     }
     #container-tasks:hover {
       visibility: visible;
-    }
+    }*/
 
 
     #btn-close-left-menu{
@@ -589,11 +582,13 @@ font-family: 'Open Sans', sans-serif;
       z-index: 5px;
     }
 
+  }
 
-
-
-
-
+  @media screen and (min-width: 961px){
+    #container-all {
+      width: 900px;
+      margin: 0 auto;
+    }
   }
 
 
