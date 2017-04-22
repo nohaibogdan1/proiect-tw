@@ -36,7 +36,7 @@ h5 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
-	display: flex;
+	display: none;
 	height: 10vh;
 	min-height: 40px;
 	max-height: 50px;
@@ -309,6 +309,15 @@ border-color: #c9457a;
 
 
 
+  @media screen and (min-height: 145px){
+    #nav-bar {
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+    }
+  }
+
 
 @media screen  and (min-width: 451px) {
 
@@ -331,13 +340,13 @@ border-color: #c9457a;
 		min-width: 210px;
 		max-width: 300px;
 		width: 30vw;
-		visibility: hidden;
+		visibility: visible;
 		flex:1;
 	}
 
-	#wrapper-main, #container-main:hover{
+	/*#wrapper-main, #container-main:hover{
 		visibility: visible;
-	}
+	}*/
 
 
 
@@ -385,29 +394,26 @@ border-color: #c9457a;
 	#nav-bar{
 		top:0px;
 		max-width: 960px;
-		z-index: 4;
 		height: 40px;
 	}
 
 
 #container-friend-tasks {
 		overflow: auto;
-		visibility: hidden;
+		visibility: visible;
+		max-width: 550px;
 	}
 
-	#wrapper-friend-tasks, #container-friend-tasks:hover {
-		visibility: visible;
-	}
+	
 
 
 	#container-main, #container-friend-tasks {
 		padding-bottom: 0px;
-		margin-top: 0px;
+		margin-top: 55px;
+		padding-top: 0px;
 	}
 
-	#container-friend-tasks, #container-main {
-		padding-top: 55px;
-	}
+	
 
 
 	#container-options-info{
@@ -419,17 +425,28 @@ border-color: #c9457a;
 } 
 
 @media screen  and (min-width: 961px) {
-	#container-all, #nav-bar {
+	#wrapper-container-all {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	#wrapper-nav-bar{
 		width: 960px;
 		margin: 0 auto;
 	}
 
+	#container-all {
+		width: 800px;
+	}
 
 
 	#nav-container {
 		background-color: #37c375;
 		height: 40px;
 		width: 100vw;
+		position: fixed;
+		z-index: 10;
+		top: 0px;
 	}
 }
 

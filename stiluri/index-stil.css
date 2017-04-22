@@ -469,7 +469,7 @@ font-family: 'Open Sans', sans-serif;
       height: auto;
       background-color: transparent;
       overflow: auto;
-      visibility: hidden;
+      visibility: visible;
 
     }
 
@@ -481,14 +481,7 @@ font-family: 'Open Sans', sans-serif;
       border-color: rgba(1,1,1,0.2);
     }
 
-    #left-menu-continut{
-      visibility: visible;
-
-    }
-    #left-menu:hover {
-      visibility: visible;
-    }
-
+   
 
     .open-left-menu {
   transition-timing-function: ease;
@@ -524,7 +517,7 @@ font-family: 'Open Sans', sans-serif;
       flex: 2;
       z-index: 0;
       overflow: auto;
-      visibility: hidden;
+      visibility: visible;
 
       height: auto;
       top:0px;
@@ -539,12 +532,12 @@ font-family: 'Open Sans', sans-serif;
     }
 
 
-    #wrapper-tasks {
+   /* #wrapper-tasks {
       visibility: visible;
     }
     #container-tasks:hover {
       visibility: visible;
-    }
+    }*/
 
 
     #btn-close-left-menu{
@@ -570,30 +563,44 @@ font-family: 'Open Sans', sans-serif;
   @media screen and (min-width: 751px){
     #nav-bar {
       max-width: 960px;
-      z-index: 2;
       height: 40px;
       top:0px;
     } 
     #left-menu, #container-tasks {
       padding-bottom: 0px;
-      padding-top: 40px;
+      margin-top: 55px;
     }
     #left-menu {
       padding-bottom: 5px;
     }
 
-    #nav-container {
+   
+
+  }
+
+  @media screen and (min-width: 961px){
+    #wrapper-container-all {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    #container-all {
+      width: 800px
+    }
+
+    #wrapper-nav-bar {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+     #nav-container {
+      position: fixed;
+      top: 0;
       background-color: #37c375;
       height: 40px;
       width: 100vw;
-      z-index: 5px;
+      z-index: 10;
     }
-
-
-
-
-
-
   }
 
 
