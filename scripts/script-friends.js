@@ -69,8 +69,28 @@ function getTasksFriend(e){
 
     	var locatieTaskFriend = document.createElement("div");
     	locatieTaskFriend.classList.add("locatie-task-friend");
-    	locatieTaskFriend.textContent = "Congress Hall, Palas";
+
+    	var denumireLocatieTaskFriend = document.createElement("div");
+    	denumireLocatieTaskFriend.textContent = "Congress Hall, Palas";
+    	locatieTaskFriend.appendChild(denumireLocatieTaskFriend);
+
+    	var btnMap = document.createElement("div");
+    	btnMap.classList.add("btn-map");
+    	
+
+    	var iconMap = document.createElement("img");
+    	iconMap.setAttribute('src', "images/map-icon.svg");
+    	iconMap.setAttribute('height', "15px");
+    	iconMap.setAttribute('width', "15px");
+    	btnMap.appendChild(iconMap);
+    	btnMap.addEventListener("click", addSpecificMap);
+
+    	locatieTaskFriend.appendChild(btnMap);
+
     	taskFriend.appendChild(locatieTaskFriend);
+
+
+
 
     	var wrapperDateHour = document.createElement("div");
     	wrapperDateHour.classList.add("wrapper-date-hour");
@@ -99,7 +119,48 @@ function getTasksFriend(e){
 }
 
 
+//adaug harta cu locatia taskului respectiv pentru a gasi mai usor acea locatie
+function addSpecificMap(e){
+	var taskMapBtn;
+    //internet explorer 6-8
+    if (e.srcElement){
+    	taskMapBtn = e.srcElement;
+    }
+    //celelalte browsere
+    else if (e.target){
+    	taskMapBtn = e.target;
+    }
 
+    var taskMap = document.createElement("div");
+    taskMap.classList.add("task-map");
+
+    taskMapBtn.parentNode.parentNode.parentNode.insertBefore(taskMap, taskMapBtn.parentNode.parentNode.nextSibling);
+    taskMapBtn.style.display = "none";
+
+    var btntaksMapCancel = document.createElement("div");
+    btntaksMapCancel.textContent = "X";
+    btntaksMapCancel.addEventListener("click", removeMapTasks);
+
+    taskMapBtn.parentNode.parentNode.insertBefore(btntaksMapCancel, taskMapBtn.parentNode.nextSibling);
+
+
+}
+
+function removeMapTasks(e){
+	var btntaksMapCancel;
+    //internet explorer 6-8
+    if (e.srcElement){
+    	btntaksMapCancel = e.srcElement;
+    }
+    //celelalte browsere
+    else if (e.target){
+    	btntaksMapCancel = e.target;
+    }
+
+    btntaksMapCancel.previousSibling.children[0].style.display="block";
+    btntaksMapCancel.parentNode.nextSibling.remove();
+    btntaksMapCancel.remove();
+}
 
 
 
@@ -111,7 +172,7 @@ function getTasksFriend(e){
 
 function showGetInfoOptions(){
 	var getInfoOptions = document.getElementById("container-options-info");
-	getInfoOptions.style.display = "block";
+	getInfoOptions.style.display = "flex";
 	var checkBoxes = document.getElementsByClassName("check-friend");
 	for (var i = 0; i < checkBoxes.length; i++) {
 		checkBoxes[i].style.display="block";
@@ -140,7 +201,7 @@ btnGetInfo.addEventListener("click", showGetInfoOptions);
 function closeGetInfoOptions(){
 	var getInfoOptions = document.getElementById("container-options-info");
 	getInfoOptions.style.display = "none";
-	var checkBoxes = document.getElementsByClassName("check");
+	var checkBoxes = document.getElementsByClassName("check-friend");
 	for (var i = 0; i < checkBoxes.length; i++) {
 		checkBoxes[i].style.display="none";
 	}

@@ -132,10 +132,7 @@ font-family: 'Open Sans', sans-serif;
   margin-top: 10px;
   bottom: 5px;
   background-color: #ff77a9;
-  padding-top: 2px;
-  /*width: 160px;*/
   width: 60%;
-  text-align: center;
   border:0;
 }
 
@@ -234,6 +231,7 @@ font-family: 'Open Sans', sans-serif;
 #btn-add-project:focus {
   outline: none;
 }
+
 
 
 
@@ -473,6 +471,14 @@ font-family: 'Open Sans', sans-serif;
       overflow: auto;
       visibility: hidden;
 
+    }
+
+    #vertical-line {
+      height: 100vh;
+      width:1px;
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-color: rgba(1,1,1,0.2);
     }
 
     #left-menu-continut{
