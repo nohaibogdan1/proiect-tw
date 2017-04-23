@@ -14,24 +14,13 @@ var map = document.getElementById("map");
 
 window.onload = initializare;
 
-
-//aici va trebui sa initializez denumirea proiectelor, nr de taskuri
-function initializareCuloriProiecte(){
-	var projectColorList = document.getElementsByClassName("project-color");
-	for (var i = 0; i < projectColorList.length; i++){
-
-		projectColorList[i].style.backgroundColor = "blue";
-	}
-}
-
-
-
-
 function initializare(){
 	initializareProiecte();
 	initializareTaskuri();
 	updatePositionSettingsMenu();
 }
+
+
 
 
 //creez un array de obiecte proiect
@@ -121,8 +110,6 @@ function initializareProiecte() {
 		projectItem.appendChild(btnModifyProject);
 
 		containerProjectsList.appendChild(projectItem);
-
-
 	}
 
 }
@@ -188,22 +175,6 @@ var listaTaskuri = [
 ];
 
 
-function dezactivareTask(e){
-	 var btnDone;
-    //internet explorer 6-8
-    if (e.srcElement){
-    	btnDone = e.srcElement;
-    }
-    //celelalte browsere
-    else if (e.target){
-    	btnDone = e.target;
-    }
-
-    
-    btnDone.parentNode.parentNode.remove();
-
-}
-
 function initializareTaskuri() {
 	var containerTasksList = document.getElementById("container-tasks-list");
 
@@ -226,8 +197,8 @@ function initializareTaskuri() {
 
 		var imgDone = document.createElement("img");
 		imgDone.setAttribute('src', "images/check-mark.svg");
-		imgDone.setAttribute('width', "20px");
-		imgDone.setAttribute('height', "20px");
+		imgDone.setAttribute('width', "20");
+		imgDone.setAttribute('height', "20");
 		imgDone.setAttribute('alt', "Done");
 		btnDone.appendChild(imgDone);
 		btnDone.addEventListener("click", dezactivareTask);
@@ -260,8 +231,8 @@ function initializareTaskuri() {
 
 		var imgModify = document.createElement("img");
 		imgModify.setAttribute('src', "images/controls.svg");
-		imgModify.setAttribute('width', "20px");
-		imgModify.setAttribute('height', "20px");
+		imgModify.setAttribute('width', "20");
+		imgModify.setAttribute('height', "20");
 		imgModify.setAttribute('alt', "Modify");
 
 		btnModifyTask.appendChild(imgModify);
@@ -274,10 +245,23 @@ function initializareTaskuri() {
 }
 
 
+function dezactivareTask(e){
+	 var btnDone;
+    //internet explorer 6-8
+    if (e.srcElement){
+    	btnDone = e.srcElement;
+    }
+    //celelalte browsere
+    else if (e.target){
+    	btnDone = e.target;
+    }
+
+    btnDone.parentNode.parentNode.remove();
+}
+
 
 function closeLeftMenu (){
 	var leftMenu = document.getElementById("left-menu");
-
 	leftMenu.classList.add("close-left-menu");
 	if(leftMenu.classList.contains("open-left-menu")) {
 		leftMenu.classList.remove("open-left-menu");
@@ -523,12 +507,7 @@ function creareModifyForm(modificare, denumireProiectText, culoareProiect){
 
 
 function adaugareFormModificareProiect(e){
-
-	
-
 	var containerProjectsList = document.getElementById("container-projects-list");
-
-
     var btnModifyClicked;
     //internet explorer 6-8
     if (e.srcElement){
@@ -587,21 +566,13 @@ function adaugareFormCreareProiect(){
     containerProjectsList.appendChild(modifyDiv);
 }
 
-
 var btnAddProject = document.getElementById("btn-add-project");
 btnAddProject.addEventListener("click", adaugareFormCreareProiect);
 
-
-
-
-
-
-
-
-
-
 var btnSettings = document.getElementById("btn-settings");
 var menuSettings = document.getElementById("settings-menu");
+
+//doresc ca meniul de setari sa fie tot timpul in dreptul butonului settings din bara de navigatie
 
 function updatePositionSettingsMenu(){
     var rectangle = btnSettings.getBoundingClientRect();
@@ -610,10 +581,7 @@ function updatePositionSettingsMenu(){
 }
 
 
-
-
 window.onresize = updatePositionSettingsMenu;
-
 
 btnSettings.addEventListener("click", showHideMenuSettings);
 
