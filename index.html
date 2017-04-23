@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index v2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="stiluri/index-stil.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Robot" rel="stylesheet">
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz7thxYsRnTZ2k_VG4cBZ12ataqXk8lvU&callback=myMap"
+	type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="nav-container">
+	<div id="wrapper-nav-bar">
+		<nav id="nav-bar">
+			<div id="btn-open-left-menu">
+				<img src="images/keyboard-right-arrow-button-1.svg" width="20" height="20" alt="Open projects">
+			</div>
+
+			<div id="btn-settings">
+				<img src="images/settings.svg" width="20" height="20" alt="Settings" >
+			</div>
+
+			<a id="btn-friends" href="friends.html">
+				<img src="images/friends-icon.svg" alt="friends" width="20" height="20">
+			</a>
+
+			<div id="btn-add-task">
+				<img src="images/add.svg" width="20" height="20" alt="Add task">
+			</div>
+		</nav>
+	</div>
+	</div>
+
+	<div id="settings-menu" >
+		<a id="btn-logout" href="login.html">
+			<img src="images/logout.svg" width="20" height="20" alt="logout">
+			<div id="logout-txt">Log Out</div>
+		</a>
+		<a id="btn-to-settings" href="settings.html">
+			<img src="images/settings-page-icon.svg" width="20" height="20" alt="settings" >
+			<div id="settings-txt">Settings</div>
+		</a>	
+	</div>
+
+
+<div id="wrapper-container-all">
+	<div id="container-all">
+
+
+		<!-- aici este meniul din partea stanga ce contine lista cu proiecte si informatii generale in partea de sus  -->
+		<div id="left-menu">
+			<!-- aici va fi partea de la butonul de inchidere a meniului in sus,
+			vreau ca aici sa aibe loc overflow si scroll ca butonul de inchidere sa ramana in aceeasi pozitie -->
+			<div id="container-top-part">
+
+				<div id="btn-default-tasks" class="task-brief">
+					<div class="container-icon-task-brief">
+						<img class="icon-task-brief" src="images/standard-icon.svg" width="18" height="18" alt="Default">
+					</div>
+					<div class="text-task-brief">Default</div>
+					<div class="number-tasks-brief">12</div>
+				</div>
+
+				<!-- btn pentru today -->
+				<div id="btn-today-tasks" class="task-brief">
+					<div class="container-icon-task-brief">
+						<img class="icon-task-brief" src="images/delivery.svg" width="18" height="18" alt="24hrs">
+					</div>
+					<div class="text-task-brief">Today</div>
+					<div class="number-tasks-brief">12</div>
+				</div>
+
+				<!-- btn pentru next 7 days -->
+				<div id="btn-7days-tasks" class="task-brief">
+					<div class="container-icon-task-brief">
+						<img class="icon-task-brief" src="images/daily-calendar-on-page-of-day-7.svg" width="18" height="18" alt="7days">
+					</div>
+					<div class="text-task-brief">Next 7 days</div>
+					<div class="number-tasks-brief">32</div>
+				</div>
+
+				<!-- aici urmeaza lista de proiecte -->
+				<div id="container-projects">
+					<header>
+						<h5>Projects</h5>
+					</header>
+					<!-- asta este lista de proiecte -->
+					<div id="container-projects-list">
+						<div class="project-item">
+							<div class="project-info">
+								<div class="container-project-color">
+									<div class="project-color" style="background-color:blue"></div>
+								</div>
+								<div class="project-name">Music</div>
+								<div class="project-nr-tasks">10</div>
+							</div>
+							<button class="btn-modify-project">...</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- btn pentru a adauga un alt proiect -->
+				<button id="btn-add-project">Add another project</button>
+
+			</div>
+
+			<!-- aici voi pune butonul de inchidere a meniului -->
+			<button id="btn-close-left-menu">
+				Close menu
+			</button>
+		</div>
+
+
+	<div id="vertical-line">
+	</div>
+
+
+	<!-- aici este containerul care contine taskurile -->
+	<div id="container-tasks">
+			<header id="main-header">
+				<h3 id="title-list-tasks">Today</h3>
+			</header>
+
+			<div id="container-tasks-list">
+				<div class="task-item" style="background-color: #FFCDD2">
+					<div class="btn-done">
+						<img src="images/check-mark.svg" width="20" height="20" alt="Done">
+					</div>
+					<div class="container-task-info">
+						<div class="title-task">Ies in oras cu Maria.</div>
+						<div class="container-date-time">
+							21:00
+						</div>
+						<div class="prject-name">
+							Personal
+						</div>
+					</div>
+					<div class="btn-modify">
+						<img src="images/controls.svg" width="20" height="20" alt="Modify">
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+</div>
+
+<!-- aici este codul pentru formularul de creare a unui nou task -->
+
+<div id="container-info-add-task" class="close-container-add-task" >
+	<form id="add-task-form">
+		<input id="task-text-input" class="elem-form" type="text" name="task-title" placeholder="e.g. Buy a book" autofocus="autofocus" />
+		<input class="time-date elem-form" type="time" name="time-task"/>
+		<input class="time-date elem-form" type="date" name="date-task"/><br/>
+		<div id="locatie" class="elem-form" >
+			<input type="text" placeholder="descriere locatie"/>
+			<div id="map-btn">
+				<img  src="images/map-icon.svg" width="20" height="20" alt="Map">
+			</div>
+		</div>
+		<div id="map" class="elem-form" ></div>
+		<select class="elem-form"  name="activat-dezactiv-task" >
+			<option value="1" selected="selected">Activat</option>
+			<option value="0">Dezactivat</option>
+		</select>
+		<select class="elem-form" name="public-private-task">
+			<option value="0" selected="selected">Privat</option>
+			<option value="1">Public</option>
+		</select>
+		<textarea class="elem-form" >Notes</textarea><br/>
+		<select  class="elem-form"  name="lists-task">
+			<option value="default">Default</option>
+			<option value="personal">Personal</option>
+			<option value="shopping">Shopping</option>
+			<option value="school">School</option>
+		</select><br/>
+		Repeat once in 
+		<input id="nr-days" class="elem-form"  type="number" name="number-days-interval" />
+		<select id="days-weeks-etc" name="days-weeks-etc">
+			<option value="1" selected="selected">Days</option>
+			<option value="2">Weeks</option>
+			<option value="3">Months</option>
+		</select>
+		<br/>
+
+		<div id="specific-days-week" class="elem-form">
+			Selectati zilele
+			<select  class="elem-form specific-days" name="specific-days-week" multiple="multiple">
+				<option value="1">Sunday</option>
+				<option value="2">Monday</option>
+				<option value="3">Tuesday</option>
+				<option value="4">Thursday</option>
+				<option value="5">Wednesday</option>
+				<option value="6">Friday</option>
+				<option value="7">Saturday</option>
+			</select>
+		</div>
+
+		<div id="specific-days-month" class="elem-form">
+			Selectati zilele 
+			<select  class="elem-form specific-days" name="specific-days-month" multiple="multiple">
+				<option value="1">1</option>
+				<option value="2">5</option>
+				<option value="3">10</option>
+				<option value="4">15</option>
+				<option value="5">20</option>
+				<option value="6">25</option>
+				<option value="7">Final of Month</option>
+			</select>
+		</div>
+
+		<input type="submit" class="elem-form" name="add-task" value="Ok" />
+		<input id="close-add-task" class="elem-form" type="button" name="cancel-all" value="Cancel"/> 
+	</form>
+</div>
+<script type="text/javascript" src="scripts/script-index.js"></script>
+
+</body>
+</html>

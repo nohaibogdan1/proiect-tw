@@ -1,0 +1,252 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	background-color:#FFFDF0;
+
+	color: rgba(0, 0, 0, 0.87);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h5 {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+
+
+#nav-bar {
+	background-color: #37c375;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	z-index: 9999;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: none;
+	height: 10vh;
+	min-height: 40px;
+	max-height: 50px;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+
+		
+	#btn-home, #btn-friends, #btn-more-friends, #btn-get-info {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 auto;
+		-ms-flex: 0 auto;
+		flex: 0 auto;
+		margin-top: 7px;
+		margin-bottom: 32px;
+	}
+
+	#btn-home {
+		margin-left: 25px;
+	}
+
+	/*opacitate pentru iconurile din nav-bar si hover */
+
+	#nav-bar img {
+	  opacity: .8;
+	  transition: all 0.5s ease;
+	}
+
+	#nav-bar img:hover {
+	  opacity: 1;
+	}
+
+	#btn-get-info {
+		margin-right: 25px;
+	}
+
+
+
+#container-main {
+	margin-top: 15px;
+	padding-left: 30px;
+	padding-right:30px;
+	padding-bottom:55px;
+}
+
+
+		
+	/*search bar*/
+	#search-bar-container {
+		display: flex;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+	}
+
+		#search-text{
+			width: 100%;
+			transition: height 0.1s ease;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 10px;
+			padding-left: 5px;
+			height: 18px;
+			border-style: solid;
+			border-color: rgba(0,0,0,0.3);
+		}
+
+
+		#search-text:focus {
+			height: 25px;
+			outline: none;
+		}
+
+
+
+		#btn-search-bar {
+			margin-left: 10px;
+		}
+
+
+
+
+	#container-friends-list {
+		margin-top: 15px;
+	}
+
+		.container-friend-item{
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: rgba(0,0,0,0.1);
+			margin-top: 8px;
+			margin-bottom: 5px;	
+			padding-bottom: 3px;
+		}
+
+			.friend-item {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				height: 40px;
+				margin-bottom: 5px;
+			}
+
+			.container-common-info {
+				margin-top: 10px;
+			}
+
+
+			.friend-picture, .friend-name {
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 auto;
+				-ms-flex: 0 auto;
+				flex: 0 auto;
+			}
+
+			.friend-name {
+				font-size: 16px;
+				margin-left: 10px;
+				padding-top:10px;
+			}
+
+
+			.follow-friend-btn {
+				margin-left: 15px;
+				margin-top: 10px;
+			  	background-color: #ff77a9;
+			  	width: 100px;
+			  	height: 20px;
+			  	border:0;
+			  	font-size: 14px;
+			}
+
+			.follow-friend-btn:active{
+				background-color: #c9457a;
+			}
+
+			.follow-friend-btn:focus{
+				outline: none;
+			}
+
+
+
+@media screen and (min-height: 145px){
+    #nav-bar {
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+    }
+}
+
+
+@media screen and (min-width: 651px){
+	#container-main {
+		width: 570px;
+		margin: 0 auto;
+		margin-top: 15px;
+	}
+}
+
+
+
+@media screen  and (min-width: 751px) {
+	#nav-bar{
+		top:0px;
+		max-width: 960px;
+		z-index: 4;
+		height: 40px;
+	}
+
+
+	#container-main {
+		padding-bottom: 0px;
+		margin-top: 55px;
+	}
+
+
+
+
+} 
+
+@media screen  and (min-width: 961px) {
+	#container-all {
+		width: 900px;
+		margin: 0 auto;
+	}
+
+	
+
+	#nav-container {
+		background-color: #37c375;
+		height: 40px;
+		width: 100vw;
+		position: fixed;
+		top: 0px;
+	}
+
+		#wrapper-nav-bar {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>friends page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="stiluri/more-friends-stil.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Robot" rel="stylesheet">
+</head>
+<body>
+
+  <div id="nav-container">
+    <div id="wrapper-nav-bar">
+      <nav id="nav-bar">
+       <a id="btn-home" href="index.html">
+        <img src="images/home-icon-2.svg" alt="home" width="20" height="20"/>
+      </a>
+
+      <a id="btn-friends" href="friends.html">
+        <img src="images/friends-icon.svg" alt="friends" width="20" height="20"/>
+      </a>
+
+      <a id="btn-more-friends" href="more-friends.html">
+        <img src="images/add-friend-icon.svg" alt="more friends" width="20" height="20"/>
+      </a>
+
+      <div id="btn-get-info">
+        <img src="images/get-info-icon-2.svg" alt="get info" width="20" height="20"/>
+      </div>
+
+
+    </nav>
+  </div>
+</div>
+
+
+<div id="container-all">
+  <div id="container-main">
+   <!-- bara pentru cautarea posibililor prietenilor -->
+    <div id="search-bar-container">
+      <input id="search-text" type="text" placeholder="Search...">
+      <div id="btn-search-bar">
+      <img src="images/search-icon.svg" alt="search" width="20" height="20"/>
+    </div>
+  </div>
+
+  <!-- continutul cu posibil prieteni -->
+  <div id="container-friends-list">
+    <div class="container-friend-item">
+      <div class="friend-item">
+        <div class="friend-picture">
+          <img src="images/friend-picture.png" width="40" height="40" alt="Avatar">
+        </div>
+        <div class="friend-name">Cristi Vasilescu</div>
+        <button class="follow-friend-btn">Follow</button>
+      </div>
+      <div class="container-common-info">
+        <h5 class="title-common-info">Ce aveti in comun:</h5>
+        <div class="common-info">A participat la intrunirea javascript.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="scripts/script-more-friends.js"></script>
+
+
+</body>
+</html>
