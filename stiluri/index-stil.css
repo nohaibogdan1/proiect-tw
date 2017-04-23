@@ -11,6 +11,11 @@ color: rgba(0, 0, 0, 0.87);
 
 }
 
+a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+  color: rgba(0,0,0,0.87);
+}
+
 
 button {
   font-family: 'Open Sans', sans-serif;
@@ -122,6 +127,52 @@ font-family: 'Open Sans', sans-serif;
 #nav-bar img:hover {
   opacity: 1;
 }
+
+
+
+
+/* lucrez la meniul settings    ....................................................
+......................................................................................................*/
+
+
+#settings-menu {
+  height: 80px;
+  background-color:#FFFDF0;
+  box-shadow:  0 -1px 16px 0 #ac9999; 
+  width: 100px;
+  position: fixed;
+  font-size:14px;
+  bottom:55px;
+  z-index: 100;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 8px;
+  display: none;
+}
+
+
+#btn-logout, #btn-to-settings {
+  display: flex;
+  display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ margin-bottom: 8px;
+ padding-bottom: 2px;
+ border-bottom-style: solid;
+ border-bottom-color: rgba(1,1,1,0.3);
+ border-bottom-width: 1px;
+ padding-left: 5px;
+ 
+}
+
+#logout-txt, #settings-txt {
+  margin-left: 5px;
+}
+
+
+
+
+
 
 
 
@@ -566,6 +617,11 @@ font-family: 'Open Sans', sans-serif;
       height: 40px;
       top:0px;
     } 
+
+    #settings-menu {
+      top:45px;
+    }
+
     #left-menu, #container-tasks {
       padding-bottom: 0px;
       margin-top: 55px;

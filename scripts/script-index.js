@@ -30,6 +30,7 @@ function initializareCuloriProiecte(){
 function initializare(){
 	initializareProiecte();
 	initializareTaskuri();
+	updatePositionSettingsMenu();
 }
 
 
@@ -589,4 +590,40 @@ function adaugareFormCreareProiect(){
 
 var btnAddProject = document.getElementById("btn-add-project");
 btnAddProject.addEventListener("click", adaugareFormCreareProiect);
+
+
+
+
+
+
+
+
+
+
+var btnSettings = document.getElementById("btn-settings");
+var menuSettings = document.getElementById("settings-menu");
+
+function updatePositionSettingsMenu(){
+    var rectangle = btnSettings.getBoundingClientRect();
+    var leftPos = rectangle.left + "px";
+    menuSettings.style.left = leftPos;
+}
+
+
+
+
+window.onresize = updatePositionSettingsMenu;
+
+
+btnSettings.addEventListener("click", showHideMenuSettings);
+
+function showHideMenuSettings() {
+	if (menuSettings.style.display == "block"){
+		menuSettings.style.display = "none";
+	}
+	else {
+		menuSettings.style.display = "block";
+	}
+	
+}
 
