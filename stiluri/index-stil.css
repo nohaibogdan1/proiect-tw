@@ -585,6 +585,10 @@ h5 {
     margin-top: 55px;
   }
 
+  #container-info-add-task{
+    margin-top:60px;
+  }
+  
 }
 
 @media screen and (min-width: 961px){
