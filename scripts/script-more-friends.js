@@ -1,6 +1,9 @@
 window.onload = initializareFriends;
 
 //initializare
+
+//adaug persoane, posibili prieteni in lista 
+
 function initializareFriends(){
 	var containerFriendsList = document.getElementById("container-friends-list");
 	for (var i = 0; i < 20; i++){
@@ -19,8 +22,8 @@ function initializareFriends(){
 		var imgFriend = document.createElement("img");
 		imgFriend.setAttribute('src', "images/friend-picture.png");
 		imgFriend.setAttribute('alt', "Picture");
-		imgFriend.setAttribute('width', "40px");
-		imgFriend.setAttribute('height', "40px");
+		imgFriend.setAttribute('width', "40");
+		imgFriend.setAttribute('height', "40");
 		friendPicture.appendChild(imgFriend);
 
 		friendItem.appendChild(friendPicture);

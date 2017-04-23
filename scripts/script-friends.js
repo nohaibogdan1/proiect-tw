@@ -44,7 +44,7 @@ function initializareFriends(){
 }
 
 
-
+// adaug dinamic taskuri in lista cu taskuri
 function getTasksFriend(e){
 	var friendBtn;
     //internet explorer 6-8
@@ -163,13 +163,7 @@ function removeMapTasks(e){
 }
 
 
-
-
-
-
-
-
-
+// afisez meniul ce contine butoanele ok si cancel si checkboxurile
 function showGetInfoOptions(){
 	var getInfoOptions = document.getElementById("container-options-info");
 	getInfoOptions.style.display = "flex";
@@ -181,23 +175,9 @@ function showGetInfoOptions(){
 
 
 
-
-
-
-
-
-
-
 btnGetInfo.addEventListener("click", showGetInfoOptions);
 
-
-
-
-
-
-
-
-
+//ascund meniul ce contine butoanele ok si cancel si checkboxurile
 function closeGetInfoOptions(){
 	var getInfoOptions = document.getElementById("container-options-info");
 	getInfoOptions.style.display = "none";
@@ -209,12 +189,13 @@ function closeGetInfoOptions(){
 
 btnCancelInfo.addEventListener("click", closeGetInfoOptions);
 
-
+//afiseaz lista cu taskuri ale unei persoane
 function showTasksFriend(){
 	var containerFriendTasks = document.getElementById("container-friend-tasks");
 	containerFriendTasks.style.display = "block";
 }
 
+//ascund lista cu taskuri ale unei persoane
 function closeTasksFriend(){
 	var containerFriendTasks = document.getElementById("container-friend-tasks");
 	containerFriendTasks.style.display = "none";

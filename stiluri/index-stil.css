@@ -1,14 +1,10 @@
 body {
 	margin: 0;
 	padding: 0;
-
-font-family: 'Open Sans', sans-serif;
-font-size: 13px;
-
-background-color:#FFFDF0;
-
-color: rgba(0, 0, 0, 0.87);
-
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  background-color:#FFFDF0;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 a:link, a:visited, a:hover, a:active{
@@ -21,6 +17,10 @@ button {
   font-family: 'Open Sans', sans-serif;
 }
 
+button:focus {
+  outline: none;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
 }
@@ -29,6 +29,7 @@ h1,h2,h3,h4,h5,h6 {
 h5 {
   font-size: 14px;
 }
+
 
 #nav-bar {
 	background-color: #37c375;
@@ -47,86 +48,34 @@ h5 {
 }
 
 
-#btn-open-left-menu, #btn-settings, #btn-friends, #btn-add-task {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 auto;
-  -ms-flex: 0 auto;
-  flex: 0 auto;
-  margin-top: 7px;
-  margin-bottom: 32px;
-}
+  #btn-open-left-menu, #btn-settings, #btn-friends, #btn-add-task {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    margin-top: 7px;
+    margin-bottom: 32px;
+  }
 
-#btn-open-left-menu {
-  margin-left: 25px;
-}
+  #btn-open-left-menu {
+    margin-left: 25px;
+  }
 
-#btn-add-task {
- margin-right: 25px;
-}
+  #btn-add-task {
+   margin-right: 25px;
+  }
 
+  /*opacitate pentru iconurile din nav-bar si hover */
 
+  #nav-bar img {
+    opacity: .8;
+    transition: all 0.5s ease;
+  }
 
-#container-tasks {
-  margin-top:15px;
-  padding-left: 30px;
-  padding-bottom: 55px;
-  padding-right: 30px;
-  max-width: 600px;
+  #nav-bar img:hover {
+    opacity: 1;
+  }
 
-}
-
-
-
-#left-menu {
-  position: fixed;
-  margin: 0px;
-  left: -100%;
-  top: 0px;
-  bottom: 0px;
-  z-index: 5;
-  width: 80vw;
-  max-width: 350px;
-  padding-left: 20px;
-  background-color: #F7F5E9;
-  box-shadow: 0 -1px 16px 0 #ac9999;  
-
-font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-
-}
-
-#left-menu #container-top-part{
-  margin-top: 10px;
-  height: 80vh;
-  overflow-y: scroll;
-
-}
-
-
-
-
-
-/*opacitate pentru iconurile din left menu si taskuri*/
-
-.task-item img  {
-  opacity: .7;
-}
-
-#left-menu img {
-  opacity: .8;
-}
-
-
-/*opacitate pentru iconurile din nav-bar si hover */
-
-#nav-bar img {
-  opacity: .8;
-  transition: all 0.5s ease;
-}
-
-#nav-bar img:hover {
-  opacity: 1;
-}
 
 
 
@@ -147,213 +96,236 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-#btn-logout, #btn-to-settings {
-  display: flex;
-  display: -webkit-box;
- display: -webkit-flex;
- display: -ms-flexbox;
- margin-bottom: 8px;
- padding-bottom: 2px;
- border-bottom-style: solid;
- border-bottom-color: rgba(1,1,1,0.3);
- border-bottom-width: 1px;
- padding-left: 5px;
+  #btn-logout, #btn-to-settings {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    margin-bottom: 8px;
+    padding-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(1,1,1,0.3);
+    border-bottom-width: 1px;
+    padding-left: 5px;
+    
+  }
+
+    #logout-txt, #settings-txt {
+      margin-left: 5px;
+    }
+
+
+
+
+#left-menu {
+  position: fixed;
+  margin: 0px;
+  left: -100%;
+  top: 0px;
+  bottom: 0px;
+  z-index: 5;
+  width: 80vw;
+  max-width: 350px;
+  padding-left: 20px;
+  background-color: #F7F5E9;
+  box-shadow: 0 -1px 16px 0 #ac9999;  
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+
+}
+
+  #left-menu img {
+    opacity: .8;
+  }
+
+  #container-top-part{
+    margin-top: 10px;
+    height: 80vh;
+    overflow-y: scroll;
+  }
+   
+    .task-brief {
+      display: flex;
+      margin-bottom: 5px;
+    }
+
+    .task-brief:hover {
+      background-color: rgba(255,255,255, 0.6);
+    }
+
+    .text-task-brief, .number-tasks-brief {
+      margin-left: 12px;
+    }
+
+
+    .project-item {
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .project-item:hover {
+      background-color: rgba(255,255,255,0.6);
+    }
+
+      .project-info {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+      }
+
+          .project-color{
+            border-radius: 20px;
+            width: 10px;
+            height: 10px;
+            margin-top:3px;
+          }
+
+        .project-name {
+          margin-left: 15px;
+          max-width: 300px;
+          word-break: break-all;
+        }
+
+        .project-nr-tasks {
+          margin-left: 25px;
+        }
+
+      .btn-modify-project {
+        padding-left: 15px;
+        padding-right: 15px;
+        color: rgba(0,0,0,0.3);
+        font-size: 14px;
+        border:none;
+        background-color: transparent;
+      }
+
+
+      .btn-modify-project:hover {
+        color: rgba(0,0,0,1);
+      }
+
+      
+
+
+
+    #btn-add-project {
+      margin-top: 10px;
+      background-color: transparent;
+      border-color: #ff77a9;
+      border-width: 1px;
+      border-style: solid;
+      font-size: 11px;
+      width: 60%;
+    }
+
+    #btn-add-project:active {
+      border-color: #c9457a;
+    }
+
+   
+
+
+
+  #btn-close-left-menu {
+    margin-top: 10px;
+    bottom: 5px;
+    background-color: #ff77a9;
+    width: 60%;
+    border:0;
+  }
+
+  #btn-close-left-menu:active {
+    border: 0;
+    background-color: #c9457a;
+  }
+
  
-}
-
-#logout-txt, #settings-txt {
-  margin-left: 5px;
-}
 
 
 
 
+  .close-left-menu {
+    transition-timing-function: ease;
+    transition: 0.5s;
+  }
+
+
+  .open-left-menu {
+    transition-timing-function: ease;
+    transition: 0.5s;
+    -webkit-transform: translate(100vw) ;
+    -moz-transform: translate(100vw) ;
+    -o-transform: translate(100vw);
+    transform: translate(100vw) ;
+  }
 
 
 
-
-
-
-
- #btn-close-left-menu {
-  margin-top: 10px;
-  bottom: 5px;
-  background-color: #ff77a9;
-  width: 60%;
-  border:0;
-}
-
-#btn-close-left-menu:active {
-  border: 0;
-  background-color: #c9457a;
-}
-#btn-close-left-menu:focus {
-  outline: none;
+#container-tasks {
+  margin-top:15px;
+  padding-left: 30px;
+  padding-bottom: 55px;
+  padding-right: 30px;
+  max-width: 600px;
 }
 
 
-.task-brief {
-  display: flex;
-  margin-bottom: 5px;
-}
+  .task-item {
+   display: flex;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -webkit-flex-direction: row;
+   -ms-flex-direction: row;
+   flex-direction: row;
+   background-color: #D7CCC8;
+
+   width: auto;
+   margin-bottom: 10px;
+   padding-bottom: 5px;
+   padding-right: 5px;
+   padding-left: 5px;
+   padding-top: 5px;
 
 
-.task-brief:hover {
-  background-color: rgba(255,255,255, 0.6);
-}
+   -webkit-box-pack: justify;
+   -webkit-justify-content: space-between;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+  }
+
+  .task-item img {
+    opacity: .7;
+  }
+
+    .title-task, .project-name {
+      word-break: break-all;
+    }
+
+    .btn-done, .btn-modify {
+      flex: 0 auto;
+      width: 20px;
+    }
+
+    .container-task-info {
+      flex:1;
+      width: 80%;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
 
 
-.task-brief .text-task-brief, .task-brief .number-tasks-brief {
-  margin-left: 12px;
-
-}
-
-.project-item {
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.project-item:hover {
-  background-color: rgba(255,255,255,0.6);
-}
-
-.project-item .project-info {
-  display: flex;
-}
-
-.project-item .project-info .project-color{
-  border-radius: 20px;
-  width: 10px;
-  height: 10px;
-  margin-top:3px;
-}
-
-.project-item .project-info .project-name {
-  margin-left: 15px;
-  max-width: 300px;
-  word-break: break-all;
-}
-
-.project-item .project-info .project-nr-tasks {
-  margin-left: 25px;
-}
-
-.btn-modify-project {
-  padding-left: 15px;
-  padding-right: 15px;
-  color: rgba(0,0,0,0.3);
-  font-size: 14px;
-  border:none;
-  background-color: transparent;
-}
-
-
-.btn-modify-project:hover {
-  color: rgba(0,0,0,1);
-}
-
-.btn-modify-project:focus {
-  outline: none;
-}
-
-
-#btn-add-project {
-  margin-top: 10px;
-  background-color: transparent;
-  border-color: #ff77a9;
-  border-width: 1px;
-  border-style: solid;
-  font-size: 11px;
-  width: 60%;
-}
-
-#btn-add-project:active {
-  border-color: #c9457a;
-}
-
-#btn-add-project:focus {
-  outline: none;
-}
-
-
-
-
-.close-left-menu {
-  transition-timing-function: ease;
-  transition: 0.5s;
-}
-
-
-.open-left-menu {
-  transition-timing-function: ease;
-  transition: 0.5s;
-  -webkit-transform: translate(100vw) ;
-  -moz-transform: translate(100vw) ;
-  -o-transform: translate(100vw);
-  transform: translate(100vw) ;
-}
-
-
-
-
-/*adaug stil pentru partea container tasks*/
-
-.task-item {
- display: flex;
- display: -webkit-box;
- display: -webkit-flex;
- display: -ms-flexbox;
- -webkit-box-orient: horizontal;
- -webkit-box-direction: normal;
- -webkit-flex-direction: row;
- -ms-flex-direction: row;
- flex-direction: row;
- background-color: #D7CCC8;
-
- width: auto;
- margin-bottom: 10px;
- padding-bottom: 5px;
- padding-right: 5px;
- padding-left: 5px;
- padding-top: 5px;
-
-
- -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.title-task, .project-name {
-  word-break: break-all;
-}
-
-.btn-done, .btn-modify {
-  flex: 0 auto;
-  width: 20px;
-
-
-}
-
-.container-task-info {
-  flex:1;
-  width: 80%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-
-
-
-
-
-
-
-/*aici este codul css pentru formularul add task*/
 
 
 #container-info-add-task {
@@ -377,16 +349,16 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-.close-container-add-task {
-  display: none;
-  background-color:rgba(215, 236, 250, 0);
-  
-}
-.open-container-add-task {
-  display: block;
-  background-color:rgba(215, 236, 250, 0.9);
-}
-  
+  .close-container-add-task {
+    display: none;
+    background-color:rgba(215, 236, 250, 0);
+    
+  }
+  .open-container-add-task {
+    display: block;
+    background-color:rgba(215, 236, 250, 0.9);
+  }
+
 
   #task-text-input {
     width: 100%;
@@ -420,7 +392,9 @@ font-family: 'Open Sans', sans-serif;
 
   #locatie {
     display: flex;
-
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
   }
 
   #map-btn {
@@ -428,7 +402,6 @@ font-family: 'Open Sans', sans-serif;
     height: 20px;
     margin-left: 20px;
   }
-
 
 
 
@@ -452,7 +425,7 @@ font-family: 'Open Sans', sans-serif;
   }
 
 
-/*clasa pentru butoanele form-ului de modificare a unui proiect*/
+
 .btn-form-modify {
   font-size: 12px;
   border: none;
@@ -465,43 +438,41 @@ font-family: 'Open Sans', sans-serif;
 .btn-form-modify:active {
   opacity: .7;
 }
-.btn-form-modify:focus {
-  outline:none;
+
+
+
+
+
+
+
+
+
+@media screen and (min-height: 145px){
+  #nav-bar {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+  }
 }
 
 
 
 
+@media screen and (min-width: 641px){
 
 
-
-
-  @media screen and (min-height: 145px){
-    #nav-bar {
-      display: flex;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-    }
+  #container-all {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top:0px;
+    height: 100%;
   }
-
-
-
-
-  @media screen and (min-width: 641px){
-
-
-    #container-all {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100vw;
-      overflow: hidden;
-      position: absolute;
-      top:0px;
-      height: 100%;
-    }
 
 
 
@@ -528,132 +499,119 @@ font-family: 'Open Sans', sans-serif;
       border-color: rgba(1,1,1,0.2);
     }
 
-   
+  
 
     .open-left-menu {
-  transition-timing-function: ease;
-  transition: 0.5s;
-  -webkit-transform: translate(0) ;
-  -moz-transform: translate(0) ;
-  -o-transform: translate(0);
-  transform: translate(0) ;
-}
-
-
-
-    #left-menu #container-top-part{
-      height: auto;
-      overflow-y: visible;
+      transition-timing-function: ease;
+      transition: 0.5s;
+      -webkit-transform: translate(0) ;
+      -moz-transform: translate(0) ;
+      -o-transform: translate(0);
+      transform: translate(0) ;
     }
 
+      #container-top-part{
+        height: auto;
+        overflow-y: visible;
+      }
 
+
+
+  #container-tasks {
+    margin-top:15px;
+    padding-left: 20px;
+    padding-bottom: 55px;
+    padding-right: 20px;
+    max-width: 600px;
+    min-width: 350px;
+    position: relative;
+    flex: 2;
+    z-index: 0;
+    overflow: auto;
+    visibility: visible;
+
+    height: auto;
+    top:0px;
+    left:0px;
+  }
 
     #title-list-tasks{
       margin-top: 0px;
       padding-top: 0px;
     }
 
-    #container-tasks {
-      margin-top:15px;
-      padding-left: 20px;
-      padding-bottom: 55px;
-      padding-right: 20px;
-      max-width: 600px;
-      min-width: 350px;
-      position: relative;
-      flex: 2;
-      z-index: 0;
-      overflow: auto;
-      visibility: visible;
 
-      height: auto;
-      top:0px;
-      left:0px;
-    }
-
-    .container-task-info {
+      .container-task-info {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
 
 
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-
-
-   /* #wrapper-tasks {
-      visibility: visible;
-    }
-    #container-tasks:hover {
-      visibility: visible;
-    }*/
-
-
-    #btn-close-left-menu{
-      display: none;
-    }
-
-    #btn-open-left-menu{
-      display: none;
-    }
-
-    #btn-settings{
-      margin-left: 25px;
-    }
-
-
-
-
+  #btn-close-left-menu{
+    display: none;
   }
 
+  #btn-open-left-menu{
+    display: none;
+  }
+
+  #btn-settings{
+    margin-left: 25px;
+  }
+
+}
 
 
 
-  @media screen and (min-width: 751px){
-    #nav-bar {
-      max-width: 960px;
-      height: 40px;
-      top:0px;
-    } 
+
+@media screen and (min-width: 751px){
+  #nav-bar {
+    max-width: 960px;
+    height: 40px;
+    top:0px;
+  } 
 
     #settings-menu {
       top:45px;
     }
 
-    #left-menu, #container-tasks {
-      padding-bottom: 0px;
-      margin-top: 55px;
-    }
-    #left-menu {
-      padding-bottom: 5px;
-    }
-
-   
-
+  #container-tasks {
+    padding-bottom: 0px;
+    margin-top: 55px;
   }
 
-  @media screen and (min-width: 961px){
-    #wrapper-container-all {
-      width: 800px;
-      margin: 0 auto;
-    }
+  #left-menu {
+    padding-bottom: 5px;
+    margin-top: 55px;
+  }
+
+}
+
+@media screen and (min-width: 961px){
+  #wrapper-container-all {
+    width: 800px;
+    margin: 0 auto;
+  }
 
     #container-all {
       width: 800px
     }
+
+  #nav-container {
+    position: fixed;
+    top: 0;
+    background-color: #37c375;
+    height: 40px;
+    width: 100vw;
+    z-index: 10;
+  }
 
     #wrapper-nav-bar {
       width: 960px;
       margin: 0 auto;
     }
 
-     #nav-container {
-      position: fixed;
-      top: 0;
-      background-color: #37c375;
-      height: 40px;
-      width: 100vw;
-      z-index: 10;
-    }
-  }
+}
 
 
 

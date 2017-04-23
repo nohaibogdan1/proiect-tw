@@ -4,7 +4,13 @@ body {
 	color: rgba(0, 0, 0, 0.87);
 }
 
-
+input {
+	margin-bottom: 5px;
+	height: 25px;
+	width: 70vw;
+	max-width: 250px;
+	min-width: 120px;
+}
 
 
 #container-main {
@@ -15,29 +21,14 @@ body {
 	z-index: 0;
 }
 
-
-.nav-btn {
-	width: 30vw;
-	min-width: 150px;
-	max-width: 300px;
-	height: 25px;
-	margin-bottom: 15px;
-	z-index: 0;
-}
-
-
-#signup-form, #login-form {
-	display: none;
-}
-
-
-input {
-	margin-bottom: 5px;
-	height: 25px;
-	width: 70vw;
-	max-width: 250px;
-	min-width: 120px;
-}
+	.nav-btn {
+		width: 30vw;
+		min-width: 150px;
+		max-width: 300px;
+		height: 25px;
+		margin-bottom: 15px;
+		z-index: 0;
+	}
 
 #cover {
 	position: absolute;
@@ -47,20 +38,23 @@ input {
 	display: none;
 }
 
-#container-form {
-	position: absolute;
-	width: 80vw;
-	max-width: 300px;
-	min-width: 200px;
-	background-color: #FFFDF0;
-	height: 260px;
-	margin-left: 20px;
-	z-index: 2;
-	padding-top: 20px;
-	padding-left: 20px;
-}
 
+	#container-form {
+		position: absolute;
+		width: 80vw;
+		max-width: 300px;
+		min-width: 200px;
+		background-color: #FFFDF0;
+		height: 260px;
+		margin-left: 20px;
+		z-index: 2;
+		padding-top: 20px;
+		padding-left: 20px;
+	}
+		#signup-form, #login-form {
+			display: none;
+		}
 
-#btn-close {
-	margin-bottom: 10px;
-}
+		#btn-close {
+			margin-bottom: 10px;
+		}
